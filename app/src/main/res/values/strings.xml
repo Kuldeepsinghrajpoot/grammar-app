@@ -1,0 +1,333 @@
+<resources>
+    <string name="app_name">Grammar</string>
+    <string name="select_a_tense">Select a Tense</string>
+    <string name="present_tense">Present Tense</string>
+    <string name="past_tense">Past Tense</string>
+    <string name="future_tense">Future Tense</string>
+    <string name="nouns">Nouns</string>
+    <string name="title_activity_navbar">navbar</string>
+    <string name="title_activity_navigation">navigation</string>
+    <string name="grammar_content">Grammar Content</string>
+    <string name="information">Information</string>
+    <string name="lsr_letter_sound_relationship">LSR-Letter Sound Relationship</string>
+    <string name="parts_of_speech">Parts of Speech</string>
+    <string name="the_article">The Article</string>
+    <string name="tense">Tense</string>
+    <string name="tense_introduction">Tense Introduction</string>
+    <string name="tense_table">Tense Table</string>
+    <string name="present_tense_content"><![CDATA[
+        <h1>Present Tense</h1>
+        Present Tense indicates an action that is happening right now.<br><br>
+        <b>Types:</b><br>
+        1. <b>Present Indefinite:</b> Subject + V1(s/es) + Object.<br>
+        Ex: He writes a letter.<br>
+        2. <b>Present Continuous:</b> Subject + is/am/are + V(ing) + Object.<br>
+        Ex: He is writing a letter.<br>
+        3. <b>Present Perfect:</b> Subject + has/have + V3 + Object.<br>
+        Ex: He has written a letter.<br>
+        4. <b>Present Perfect Continuous:</b> Subject + has/have + been + V(ing) + since/for + Time.<br>
+        Ex: He has been writing a letter for two hours.
+    ]]></string>
+    <string name="past_tense_content"><![CDATA[
+        <h1>Past Tense</h1>
+        Past Tense indicates an action that has already happened.<br><br>
+        <b>Types:</b><br>
+        1. <b>Past Indefinite:</b> Subject + V2 + Object.<br>
+        Ex: He wrote a letter.<br>
+        2. <b>Past Continuous:</b> Subject + was/were + V(ing) + Object.<br>
+        Ex: He was writing a letter.<br>
+        3. <b>Past Perfect:</b> Subject + had + V3 + Object.<br>
+        Ex: He had written a letter.<br>
+        4. <b>Past Perfect Continuous:</b> Subject + had + been + V(ing) + since/for + Time.<br>
+        Ex: He had been writing a letter since morning.
+    ]]></string>
+    <string name="future_tense_content"><![CDATA[
+        <h1>Future Tense</h1>
+        Future Tense indicates an action that will happen.<br><br>
+        <b>Types:</b><br>
+        1. <b>Future Indefinite:</b> Subject + will + V1 + Object.<br>
+        Ex: He will write a letter.<br>
+        2. <b>Future Continuous:</b> Subject + will be + V(ing) + Object.<br>
+        Ex: He will be writing a letter.<br>
+        3. <b>Future Perfect:</b> Subject + will have + V3 + Object.<br>
+        Ex: He will have written a letter.<br>
+        4. <b>Future Perfect Continuous:</b> Subject + will have been + V(ing) + since/for + Time.<br>
+        Ex: He will have been writing a letter for two hours.
+    ]]></string>
+    <string name="tense_table_content"><![CDATA[
+<!--        <h1>Tense Table</h1>-->
+        <table border="1" style="width:100%; border-collapse: collapse; text-align: center;">
+            <tr style="background-color: #f2f2f2;">
+                <th>Tense</th>
+                <th>Indefinite (V1/V2)</th>
+                <th>Continuous (ing)</th>
+                <th>Perfect (V3)</th>
+                <th>Perf. Cont. (ing)</th>
+            </tr>
+            <tr>
+                <td><b>Present</b></td>
+                <td>do/does + V1</td>
+                <td>is/am/are</td>
+                <td>has/have</td>
+                <td>has/have been</td>
+            </tr>
+            <tr>
+                <td><b>Past</b></td>
+                <td>did + V1 (Aff: V2)</td>
+                <td>was/were</td>
+                <td>had</td>
+                <td>had been</td>
+            </tr>
+            <tr>
+                <td><b>Future</b></td>
+                <td>will + V1</td>
+                <td>will be</td>
+                <td>will have</td>
+                <td>will have been</td>
+            </tr>
+        </table>
+    ]]></string>
+    <string name="tense_intro_content"><![CDATA[
+        <h1>Tense</h1>
+        <b>Action verb को two points द्वारा show किया जाता है |</b><br>
+        Time - Action को किस time मे करना हैं | <br>
+        State -Action किस state (Position )मे हैं | <br><br>
+
+        Time:- Time से समझते है की कोई भी action verb only three time मे होती है जो P.P F. (present ,past ,future )<br>
+
+        State :- State का means है की कोई action verb only four state मे ही संभव है | <br> (I.C -P .PC)<br>
+        Where :-<br>
+        I = Indefinite <br>
+        c =continuous <br>
+        P =Perfect <br>
+        PC=Perfect _continuous <br><br>
+
+        जब three time का multiply four state से करते है तो 12 Tense Generat होते हैं | <br><br>
+        IC - PPC x PPF = 12 Tense <br>
+        Where :-<br>
+        I = Indefinite <br>
+        c =continuous <br>
+        P =Perfect <br>
+        PC = Perfect _continuous <br>
+        PPF = present past future <br><br>
+        <h4> Tense of hindi ID :-</h4>
+        P. P. F = है ,था ,गा <br>
+        <h4>State of hindi ID :-</h4>
+        I = ता ,Future =गा <br>
+        C =रहा <br>
+        P = चुका <br>
+        PC = रहा समय <br>
+        <h4>Helping Verb :-</h4>
+        12 tense मे use होने वाली Helping verbs को 5 Grpups मे रख कर समझते है | <br>
+        1 . will <br>
+        2. Do form- do does did <br>
+        3. Be form - is am are was were , be <br>
+        4. Have Form - has have had <br>
+        5. Been <br> <br>
+
+        <h4>Main verb use(short form ) :-</h4>
+        P P F - I =121 <br>
+        6Continuous = ing <br>
+        Three tenses III form <br>
+
+        <h4>5 verbs of use in 12 tense :-</h4>
+        1.Present + Future Indefinite = I Form Affirmative <br>
+        2.Past Indefinite Affirmative = Second form <br>
+        3.6 Continuous ing <br>
+        4.3 Perfect III Form <br> <br>
+        5.Present Indefinite Affirmative = s ,es (singular subject),no use s ,es in plural subject.
+        <h4> Negative + Wh(Question word) के साथ Helping verb का use:-</h4>
+        1.Present Indefinite के Negative और Wh के साथ do does लगाते है Singular subject के साथ does और plural के साथ do लगाते है| <br>
+        2.Past Indefinite = Negative+Wh के साथ helping verb did use करते है with singular + plural subject. <br>
+        Note:- शेष all tenses के साथ helping verb होती है केवल Present Past Indefinitive को छोड़ कर | <br> <br>
+
+        <h4>Structure of tense :- </h4>
+        Subject + helping verb + main verb + Combination <br>
+        Note :-किसी भी sentences का english translation करने के लिए 3 चीज़ो की जरुरत होती है<br>
+        S + H .V +M .V <br>
+        Where :- <br>
+        S =Subject <br>
+        HV =helping verb <br>
+        MV =main verb <br>
+
+        <h4>S form concept :- </h4>
+        1.S form three types की है - s ,es ,ies <br>
+        2.95 % verbs के अंत मे s का use होता है | <br>
+        3.जिन verbs के अंत मे s ,ss ,sh ch ,z ,o,x आया हो उन मे s लगाते है| <br>
+        4.जिन verbs के अंत मे y हो और y के पूर्व vowel हो तो अंत मे s लगाते हैं | <br> Example :-play = plays. <br>
+        5.जिन verbs के अंत मे y हो और y के पूर्व कोई consonent हो तो y को remove कर ies कर देते हैं | <br> Example :- Try - tries. <br>
+        <h4>Verb form :-</h4>
+        Basic Points :- verb की 5 form होती हैं | <br>
+        1.First form <br>
+        2.Second form <br>
+        3.Third form <br>
+        4.Ing form <br>
+        5.S form <br> <br>
+        <h2>Action verb two type की होती हैं :-</h2>
+        1. Regular verb <br>
+        2. Irregular verb <br> <br>
+        <h4> 1.Regular verb :- </h4>
+        1.Regular verb का अर्थ एक जैसा | जिस की second , third form एक जैसी होती है| <br>जिसने D form द्वारा बनाते है | लगभग 95% verbs Regular verbs होती है |
+        2.D form three type की होती है -(I.) d (II) ed (III) ied. <br> <br>
+        <h2> Note :- </h2>
+        1. जिस verb के अंत मे y और उस के तुरंत पहले कोई vowel आया हो तो y के बाद ed लगाते है | <br>
+        Example :- Play - Played. <br> <br>
+        2.जिस verb के अंत मे y और उस के तुरंत पहले कोई consonant आया हो तो y को remove
+        कर ied कर देते है | <br>
+        Example:- Reply - Replied. <br> <br>
+
+        <h4> Irregular verb :-</h4> Irregular verb की second और third form को d form लगा कर नहीं बना सकते है | उसे 3 - 3 - 13 -23 द्वार ही बना सकते है | <br> <br>
+
+        <h4>Using ing form verb (verb मे ing लगाने के rule ) :- </h4>
+        Verb मे ing लगाने के सामान्यता 7 Rule है | <br> <br>
+        1.जिन verbs के अंत मे letter e होता है तो ing use करते समय e हटा दिया जाता है| <br>
+        Example :- come -coming. <br> <br>
+
+        2.जिन verbs के अंत मे कोई एक consonent हो और उस के पूर्व एक vowel हो तो ing use करते समय last latter double हो जाता है | <br>
+        Example :- stop - stopping. <br> <br>
+
+        3.जिन verbs के अंत मे y या double LL हो तो उन मे ing लगाते समय y या double L को नहीं हटाते है| <br>
+        Example :- Cry - crying. <br>
+        call - calling. <br> <br>
+        4.जिन शब्दो के अंत मे consonant हो और उस के पहले double vowel हो तो last consonant double नहीं होता है | <br>
+        Example :- Read - Reading. <br> <br>
+
+        5.जिन शब्दो के अंत मे N आया हो और उस से पहले कोई भी vowel आया हो तो अंतिम latter N double नहीं होता है|<br>Example :- Open - Opening <br> <br>
+
+        <h2> Note:- </h2> यह Rule अप-वादों से भरा है अतः begin ,run, आदि verbपर लागू नहीं होता है| <br> <br>
+
+        6.जिन verb के अंत मे ie हो उन मे ing लगाते समय ie को y मे बदल देते है | <br>
+        Example :- Lie - Lying <br>
+        Die - Dying. <br> <br>
+        7.जिन verbs के अंत मे ee, ie, ye हो उन verbs के अंत मे ing लगाते समय अंतिम e नहीं हटाते है | <br>
+        Example :- See - Seeing <br>
+        Dye - Dyeing <br> <br>
+        <h4>verb :-</h4>
+        ऐसे word जो कोई न कोई action करते है verb कहलाती है | verb 4 type की होती है | <br>
+        1.Transitive verb (सकर्मक verb ) <br>
+        2.Intransitive verb (अकर्मक verb ) <br>
+        3.linking verb ( Complement को add करने वाली verbs ) <br>
+        4.Auxiliary verb (Helping verb) <br> <br>
+
+        पढ़ने और समझने की दृष्टि से दो part मे devide किया जा सकता है <br>
+        1.Sentences मे use के आधार पर | (1. Transtative ,2 Intransitive verb ) <br>
+        2.Sentences मे form के आधार पर | (5 form के रूप मे ) <br> <br>
+        (I.)Sentences मे प्रयोग के आधार पर :- वाक्यों मे प्रयोग के आधार पर Transtative verb और Intrasnitive verb को चार प्रकार से वाक्यों मे प्रयोग करते है अर्थात चार नामो से जानते है - <br>
+
+        <h4>1 . Transitive verb :- </h4>.ऐसी verb जो अपना अर्थ बिना object के पूरा नहीं कर सकती है transative verb कहलाती है | <br>
+        Example:- He writes a letter. <br> <br>
+
+        <h4>2 . Intransitive verb:-</h4> ऐसी verb जो अपना अर्थ बिना कर्म के पूरा कर सकती है intrantative verb कहलाती है 80% verb Transatative होती है तथा शेष 20% Intrasntatives होती है दैनिक प्रयोग मे होनी वाली inransitive verb निम्लिखित है - <br> <br>
+        come ,go ,walk ,run <br>
+        fail, weep, pass, laugh <br>
+        sit ,stand, dance ,jump <br>
+        Rain, happen seep wander <br>
+
+        <h4>3.Finite verb :-</h4> ऐसी verbs जो अपने कर्ता एवं कर्म के अनुसार परिवर्तित होती है उनसे finitive verb कहते है | <br>
+        Example :- Rita and sita are sisters.( इन का प्रयोग sentences मे होता है| <br>
+        <h4> 4 .Non -finites verb:-</h4> verb के वे form जो न तो वाक्य के subject के person तथा numbers से प्रभावित होते है और न उन के tense की जानकारी होती है | verb के ऐसे रूपों को non-finite of the verb कहते है | <br>
+        ये तीन प्रकार की होती है - (a) Infinitive . (b) Gerund . (c) Participle <br>
+
+        <h2>(II.) form के आधार पर verb दो प्रकार की होती है :-</h2>
+        (a.)Regular verb <br>
+        (b.)Irregular verb <br> <br>
+        इन verb को हम अन्य नाम से भी जानते है - <br>
+        1.weak verb <br>
+        2.srtong verb <br> <br>
+
+        <h4>(a.) Regular verb और weak verb :-</h4> इन का अर्थ है एक जैसा जिनकी second और third फॉर्म एक जैसी होती है जिसे D form द्वारा बनाते है <br>
+        लगभग 95% verbs Regular verbs होती है | <br> <br>
+        D form three type की होती है -(I.) d (II) ed (III) ied.
+
+        <h2> Note :-</h2>
+
+        1. जिस verb के अंत मे y और उस के तुरंत पहले कोई vowel आया हो तो y के बाद ed लगाते है | <br>
+        Example :- Play - Played. <br> <br>
+        2. जिस verb के अंत मे y और उस के तुरंत पहले कोई consonant आया हो तो y को remove कर ied कर देते है | <br>
+        Example:- Reply - Replied.<br>
+
+        <h4> (b.) Irregular verb :-</h4> Irregular verb की second और third form को d form लगा कर नहीं बना सकते है | उसे 3 - 3 - 13 -23 द्वार ही बना सकते है | इस rules को fours changes द्वारा समझते है-<br>
+        1.first 3 का means है तीनो form same <br>
+        2.second 3 का means है तीनो फॉर्म different <br>
+        3.13 का means है first और third form same और second different होती है <br>
+        4.23 का means है second और third एक जैसा होता है लेकिन यह D form से नहीं बनता है |<br><br>
+        <h2>Note :-</h2>यदि verbs के अंत मे D आया हो तो कुछ verb के II form और III form मे d के स्थान पर t कर देते है | <br>
+        Example :- Send - sent-sent.<br><br>
+
+        <h4>3. Linking verb :-</h4> ऐसी verb जो किसी noun तथा noun, noun तथा pronoun अथवा किसी compliment को जोड़ने का कार्य करती है liking verb कहलाती है| <br>
+        ये 6 type की होती है -(is,am,are,was,were,will be)<br>
+        My brother is a player.<br><br>
+        <h4>4 .Auxiliary verbs (सहायक क्रियाये ):- </h4>ये दो प्रकार की होती है - <br>
+        (I) Primary Auxiliary.(II) Modal Auxiliary. <br>
+
+        <h2> (I) Primary Auxiliary:- </h2>जब be form do form तथा have form का प्रयोग mai verb के साथ tense ,negative तथा interrogative sentence बनाने मे प्रयोग करते है तो इन्हे primary Auxiliary verb कहते है<br> <br>
+
+        ये तीन प्रकार की होती है -<br>
+        (a) be form (ये 5 प्रकार की होती है is,am,are ,was,were)<br>
+        (b) do form (ये तीन प्रकार की होती है do,did,does)<br>
+        (c) have form (ये तीन प्रकार की होती है has ,have ,had)<br>
+
+        <h2>(II) Modal Auxiliary :- </h2>ये verb mode प्रकट करने मे full verb की सहायता करती है | अतः इन्हे Modal Auxiliary verb कहते है | ( shall, should, will , would,can,could,may,might,must,ought,need, dare,hasto, haveto,hadto)<br><br>
+
+        <h2>Causative verbs (प्रेरणा दायक क्रियाएँ) </h2>
+        (get ,have , cause, make)<br>
+        जब कर्ता किसी कार्य को स्वयं न कर के किसी अन्य व्यक्ति से कराता है या करने की प्रेरणा देता है तो उस Sentence की verb causative verb होती है | <br>
+        जैसे - चलने से चलाना | <br><br>
+        <h4>Rule:</h4>
+        1.यदि sentence Active voice की verb का हो तो Translation करते समय make या cause लगा कर बनाते है | make के बाद main verb के पूर्व To नहीं लगाया जाता है|जब की cause का प्रयोग होने पर To लगाया जाता है|<br><br>
+
+        <h2>Structure:-</h2> subject(कर्ता)+ make या cause + काम करने वाला + verb का first
+        form + other sentences <br><br>
+        Example:- He wept( वह रोया ) का causative sentence हुआ -He made me
+        weep अथवा He caused me to weep (उस ने मुझे रुलाया )<br><br>
+
+        2.यदि verb passive voice मे है तो get तथा have का प्रयोग होता है| साथ ही main verb की third form आती है -<br>
+
+        Example :- he wrote a letter<br>
+        I got a letter written ‘OR’<br>
+        I had a letter written
+    ]]></string>
+    <string name="double_parts_of_speech">Double parts of speech</string>
+    <string name="voice">Voice</string>
+    <string name="the_preposition">The Preposition</string>
+    <string name="sentence">Sentence</string>
+    <string name="uses_of_some_special_words">Uses of some special words</string>
+    <string name="title_activity_grammar_items_detail_host">GrammarItemsDetailHostActivity</string>
+    <string name="title_grammaritems_list">GrammarItems</string>
+    <string name="title_grammaritems_detail">GrammarItems Detail</string>
+    <string name="pronunciation_title">Correct Pronunciation</string>
+    <string name="english_label">That (English)</string>
+    <string name="hindi_label">वो (Hindi)</string>
+    <string name="arabic_label">al/ال (Arabic)</string>
+    <string name="vowels_title">The + Vowels = दी</string>
+    <string name="consonants_title">The + Consonants = द</string>
+    <string name="example_ant">The ant - दी एंट</string>
+    <string name="example_elephant">The elephant - दी एलीफेंट</string>
+    <string name="example_apple">The apple - दी एप्पल</string>
+    <string name="example_orange">The Orange - दी ऑरेंज</string>
+    <string name="example_rock">The rock - द रॉक</string>
+    <string name="example_car">The car - द कार</string>
+    <string name="example_guide">The guide - द गाइड</string>
+    <string name="example_message">The message - द मैसेज</string>
+    <string name="_1_indefinite_article_n2_definite_article">1. Indefinite Article\n2. Definite Article</string>
+    <string name="english_a_an_the_type">English मे A, An, The को आर्टिकल कहते हैं | ये दो type के होते है |</string>
+    <string name="the_article_">The Article</string>
+    <string name="_1_indefinite_article">1. Indefinite Article :-</string>
+    <string name="a_an_indefinite_noun_singular_countable_uncountable_article">A तथा An को Indefinite कहा जाता है क्योंकि ये अनिश्चित noun के पहले आते है। इनका प्रयोग केवल Singular Countable के साथ होता है| Uncountable के साथ इस article का प्रयोग नहीं किया जाता है।</string>
+    <string name="example_a_chair_is_made_of_wood_n_chair_countable_wood_uncountable">Example :- A chair is made of wood.\nइस वाक्य मैं chair countable हैं जब की wood Uncountable हैं|</string>
+    <string name="use_of_a">Use of A :-</string>
+    <string name="a_noun_consonant_consonant_n_nexample_a_dog_a_horse_n_n_u_example_a_university_n_n_o_example_a_one_eyed_man">A का प्रयोग उन Noun के पहले किया जाता है जिसकी गिनती की जा सकती हैं, और उच्चारण Consonant जैसा हो या consonant की आवाज़ से हो |\n\nExample - A dog, A horse.\n\nजब U की आवाज़ यू हो | Example :- A university.\n\nजब ‘O’ की आवाज़ व हो | Example:- A one eyed man.</string>
+    <string name="use_of_an">Use of An :-</string>
+    <string name="_1_indefinite_article_an_vowel_nexample_an_ass_an_orange_n_n2_h_silent_an_nexample_an_hour_an_honest_n_n3_short_form_vowel_an_f_l_m_n_o_s">1. Indefinite Article An का प्रयोग उन शब्दों के पहले होता है जो किसी vowel से प्रारम्भ हुए हो |\nExample :- An ass, An orange.\n\n2. जिन शब्दों मैं ‘H’ Silent रहता है उसके पहले An का प्रयोग होता है|\nExample :- An Hour, An Honest.\n\n3. जिन short form वाले शब्द जिनका उच्चारण vowel जैसा हो, के पूर्व An का प्रयोग होता हैं वे अक्षर निम्न हैं: F, L, M, N, O, S.</string>
+    <string name="_2_definite_article">2. Definite Article :-</string>
+    <string name="the_definite_article_noun_n_n1_the_n_n2_n_n3_common_noun_example_the_dog_is_a_faithful_animal_n_n4_superlative_degree_n_n5_adjective_the_noun_example_the_rich_are_not_always_kind_n_n6_all_both_whole_the_n_n7_the_example_the_english_english">‘The’ Definite Article निश्चित Noun के पहले प्रयोग होता हैं :-\n\n1. The का प्रयोग उस समय होता हैं जब किसी प्राणी या वस्तु अथवा जिसका पहले उल्लेख हो चुका हो या जिससे वक्ता परिचित हो, के बारे मे बात करते हैं|\n\n2. प्राकृतिक सम्पदा जैसे नदी पहाड़ समुद्र रेगिस्तान आदि कुछ देश प्रांत भौगोलिक नाम के पहले लगाते हैं |\n\n3. एक वचन common noun जब वे समस्त जाति के लिए हो | Example:- The dog is a faithful animal.\n\n4. धार्मिक ग्रंथो, चारों दिशाओं, कुछ वस्तुये जो केवल संसार मे एक हो, Superlative Degree, मुख्य घटनाये समाचार पत्रों प्रसिद्ध इमारतों, आवागमन के साधन के पूर्व करते हैं|\n\n5. Adjective से पहले The का प्रयोग होता हैं| जब वह Noun की तरह प्रयोग होता हैं| Example:- The rich are not always kind.\n\n6. All और Both के पश्चात तथा whole के पूर्व The का प्रयोग होता हैं |\n\n7. देशों के नामो के पूर्व The का प्रयोग होने से वहाँ के व्यक्तियों का बोध होता है तथा प्रयोग न होने से उस शब्द से उस देश की भाषा का बोध होता है | Example:- The English (अंग्रेज़), English (भाषा)</string>
+    <string name="no_use_of_article">No use of Article :-</string>
+    <string name="rule_1_proper_noun_article_example_delhi_is_a_big_city_n_n2_material_noun_the_use_example_iron_is_a_useful_metal_n_n3_abstract_noun_the_use_example_honesty_is_the_best_policy_n_n4_common_noun_use_article_example_man_is_mortal_n_n5_article_use_example_king_ashok_n_n6_kind_of_word_nouns_article_example_what_kind_of_man_is_he_n_n7_regular_meals_article_use_example_fever_malaria">Rule 1 - Proper noun के पहले प्रायः किसी भी Article का प्रयोग नहीं होता है | Example :- Delhi is a big city.\n\n2. Material Noun के पहले The का use नहीं होता है| Example :- Iron is a useful metal.\n\n3. Abstract noun के पहले the का use नहीं होता है| Example :- Honesty is the best policy.\n\n4. जब कोई common noun विस्तृत अर्थ मे use हो तो Article नहीं आता है | Example :- Man is mortal.\n\n5. पद सहित नामो के पहले कोई Article का use नहीं होता हैं | Example :- king Ashok.\n\n6. kind of word के बाद आने वाले nouns के पहले कोई article नहीं लगता हैं | Example :- What kind of man is he?\n\n7. बीमारियों, Regular meals और उन वस्तुओ के पहले जो अपनी किस्म की एक है, किसी भी Article का use नहीं होता है | Example :- Fever, Malaria</string>
+    <string name="note_n1_two_use_the_measles_the_mumps_n2_breakfast_lunch_dinner_n3_hell_heaven_god_the_devil">Note :- \n1. केवल two बीमारियों के पूर्व आर्टिकल का use होता हैं: The measles, The mumps.\n2. Breakfast, Lunch, Dinner.\n3. Hell, Heaven, God (The devil को छोड़कर).</string>
+    <string name="_8_nouns_singular_sense_plural_article_use_example_advice_cattle_n_n9_noun_compliments_example_they_made_him_emperor_n_n10_two_more_adjective_noun_qualify_and_article_adjective_example_the_red_and_white_flower_n_n11_adjective_differents_nouns_qualify_article_adjective_example_the_red_and_the_white_flower_n_n12_two_more_nouns_different_people_things_article_use_before_every_one_example_the_manager_and_the_president_have_come">8. उन Nouns के पहले जो देखने मे Singular हैं, लेकिन sense मे Plural हो Article का use नहीं होता है | Example :- Advice, Cattle.\n\n9. उन noun के पहले जो compliments हो | Example :- They made him emperor.\n\n10. जब two और more adjective एक ही noun को Qualify करे और वे ‘And’ से जुड़े हो तो Article पहले वाले adjective के पूर्व ही आता है | Example :- The red and white flower.\n\n11. जब दो या दो से अधिक adjective differents nouns को qualify करें तो Article प्रत्येक adjective के पहले होता है | Example :- The red and the white flower.\n\n12. जब two और more Nouns different people और things से संबंध रखते हो तो Article use before every one. Example :- The manager and the president have come.</string>
+    <string name="grammar_guide">Grammar Guide</string>
+    <string name="learning_point">Learning Point</string>
+    <string name="types_of_article">Types of Article</string>
+    <string name="master_grammar">Master English Grammar</string>
+    <string name="description_label">Description:</string>
+</resources>
