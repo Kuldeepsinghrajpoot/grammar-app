@@ -128,7 +128,7 @@ fun SoundSlrContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {})
                     Text("ये हिंदी के 16 letter होते है -", fontSize = 14.sp, color = Color.Black, modifier = Modifier.padding(bottom = 8.dp))
                     
                     val letters = listOf(
-                        "प\nP - paste, spot", "ब\nB - backe, bake", "ट\nT - Time, table",
+                        "प\nP - paste, spot", "ब\nB - back, bake", "ट\nT - Time, table",
                         "ड\nD - Day, Daily", "ग\nG - Bag, game, gun", "ह\nH - Habit, Hand",
                         "म\nM - Man, Moon, mix", "न\nN - Name, Nail, Nil", "ल\nL - Life, Left",
                         "र\nR - Round, Rule", "य\nY - Yes, Year", "थ\nTh - Both, Path",

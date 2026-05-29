@@ -162,24 +162,24 @@ public class MainActivity extends AppCompatActivity {
         if ("PRESENT".equals(topic)) {
             title = "Present Tense";
             description = "The Present Tense indicates an action that is happening right now.";
-            types.add(new TenseTypeData("1. Present Indefinite", "Subject + V1(s/es) + Object.", "He writes a letter."));
-            types.add(new TenseTypeData("2. Present Continuous", "Subject + is/am/are + V(ing) + Object.", "He is writing a letter."));
-            types.add(new TenseTypeData("3. Present Perfect", "Subject + has/have + V3 + Object.", "He has written a letter."));
-            types.add(new TenseTypeData("4. Present Perfect Continuous", "Subject + has/have + been + V(ing) + since/for + Time.", "He has been writing a letter for two hours."));
+            types.add(new TenseTypeData("1. Present Indefinite", "Subject + V1(s/es) + Object.", "The sun rises in the east."));
+            types.add(new TenseTypeData("2. Present Continuous", "Subject + is/am/are + V(ing) + Object.", "They are playing football in the field."));
+            types.add(new TenseTypeData("3. Present Perfect", "Subject + has/have + V3 + Object.", "She has already finished her homework."));
+            types.add(new TenseTypeData("4. Present Perfect Continuous", "Subject + has/have + been + V(ing) + since/for + Time.", "I have been living in this city for five years."));
         } else if ("PAST".equals(topic)) {
             title = "Past Tense";
             description = "The Past Tense indicates an action that has already happened.";
-            types.add(new TenseTypeData("1. Past Indefinite", "Subject + V2 + Object.", "He wrote a letter."));
-            types.add(new TenseTypeData("2. Past Continuous", "Subject + was/were + V(ing) + Object.", "He was writing a letter."));
-            types.add(new TenseTypeData("3. Past Perfect", "Subject + had + V3 + Object.", "He had written a letter."));
-            types.add(new TenseTypeData("4. Past Perfect Continuous", "Subject + had + been + V(ing) + since/for + Time.", "He had been writing a letter since morning."));
+            types.add(new TenseTypeData("1. Past Indefinite", "Subject + V2 + Object.", "We went to the market yesterday."));
+            types.add(new TenseTypeData("2. Past Continuous", "Subject + was/were + V(ing) + Object.", "It was raining heavily all night long."));
+            types.add(new TenseTypeData("3. Past Perfect", "Subject + had + V3 + Object.", "The train had left before we reached the station."));
+            types.add(new TenseTypeData("4. Past Perfect Continuous", "Subject + had + been + V(ing) + since/for + Time.", "He had been studying for three hours before he slept."));
         } else if ("FUTURE".equals(topic)) {
             title = "Future Tense";
             description = "The Future Tense indicates an action that will happen.";
-            types.add(new TenseTypeData("1. Future Indefinite", "Subject + will + V1 + Object.", "He will write a letter."));
-            types.add(new TenseTypeData("2. Future Continuous", "Subject + will be + V(ing) + Object.", "He will be writing a letter."));
-            types.add(new TenseTypeData("3. Future Perfect", "Subject + will have + V3 + Object.", "He will have written a letter."));
-            types.add(new TenseTypeData("4. Future Perfect Continuous", "Subject + will have been + V(ing) + since/for + Time.", "He will have been writing a letter for two hours."));
+            types.add(new TenseTypeData("1. Future Indefinite", "Subject + will + V1 + Object.", "They will visit us next Sunday."));
+            types.add(new TenseTypeData("2. Future Continuous", "Subject + will be + V(ing) + Object.", "I will be waiting for you at the airport."));
+            types.add(new TenseTypeData("3. Future Perfect", "Subject + will have + V3 + Object.", "She will have completed the project by next month."));
+            types.add(new TenseTypeData("4. Future Perfect Continuous", "Subject + will have been + V(ing) + since/for + Time.", "We will have been traveling for a week by tomorrow morning."));
         } else {
             return;
         }

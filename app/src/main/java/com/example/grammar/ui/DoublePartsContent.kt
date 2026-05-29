@@ -162,10 +162,10 @@ fun DoublePartsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         val gerundUses = listOf(
-                            "(a) Subject to a verb:\nWalking is useful health.",
+                            "(a) Subject to a verb:\nWalking is useful for health.",
                             "(b) Object to a verb:\nShe likes singing songs.",
                             "(c) Object to a preposition:\nShe is fond of dancing.",
-                            "(d) Complement to a verb:\nHis habit was abusing other."
+                            "(d) Complement to a verb:\nHis habit was abusing others."
                         )
                         gerundUses.forEachIndexed { index, text ->
                             ColoredPoint(text = text, index = index + 3)

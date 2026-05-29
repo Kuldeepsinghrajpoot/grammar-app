@@ -90,14 +90,14 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 // 1. Definitions
                 ContentSection(title = "1. Definitions & Examples", titleColor = Color(0xFF1976D2)) {
                     val parts = listOf(
-                        Triple("1. Noun (संज्ञा)", "A noun is the name of a person, place or thing.", "Ram, Nowogong."),
+                        Triple("1. Noun (संज्ञा)", "A noun is the name of a person, place or thing.", "Ram, Nowgong."),
                         Triple("2. Pronoun (सर्वनाम)", "A pronoun is a word used instead of a noun.", "He, She, it."),
                         Triple("3. Verb (क्रिया)", "A verb is a word that says something.", "Come, go."),
                         Triple("4. Adjective (विशेषण)", "An Adjective Qualifies a noun or a pronoun.", "Beautiful, Good."),
-                        Triple("5. Adverb (क्रिया विशेषण)", "An adverb modifies a verb, adjective or another adverb.\n(क्रिया विशेषण वह है जो किसी verb, विशेषण या किसी अन्य क्रिया विशेषण की विशेषता प्रकट करते है |)", "Very, Slowly, too."),
-                        Triple("6. Preposition (सम्बन्ध बोधक)", "Preposition is a word placed before a noun or pronoun to show its relation with some other words.", "At, on, With."),
-                        Triple("7. Conjunction (संयोजक)", "Conjunction is word which joins words, clauses or sentences with each other.", "And, Either… Or, Neither… Nor."),
-                        Triple("8. Interjection (विस्मय वोधक)", "An interjection expresses the strong feeling of joy, hate, sorrow, wonder etc.", "")
+                        Triple("5. Adverb (क्रिया विशेषण)", "An adverb modifies a verb, adjective or another adverb.\n(क्रिया विशेषण वह है जो किसी verb, विशेषण या किसी अन्य क्रिया विशेषण की विशेषता प्रकट करते है |)", "Very, Slowly, Too, Fast."),
+                        Triple("6. Preposition (सम्बन्ध बोधक)", "Preposition is a word placed before a noun or pronoun to show its relation with some other words.", "At, On, With, From, To, Into."),
+                        Triple("7. Conjunction (संयोजक)", "Conjunction is word which joins words, clauses or sentences with each other.", "And, But, Or, Because, Either… Or, Neither… Nor."),
+                        Triple("8. Interjection (विस्मय वोधक)", "An interjection expresses the strong feeling of joy, hate, sorrow, wonder etc.", "Alas! Hurrah! Oh!")
                     )
                     
                     parts.forEachIndexed { index, (name, def, ex) ->
@@ -146,20 +146,20 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                     
                     SubSectionTitle("Change into singular to plural :-", Color.Black)
                     val rules = listOf(
-                        "1. अधिकांश शब्दों के अंत मे s लगा कर singular से plural बनाते है ।\nExample: Book - Books",
-                        "2. जिन शब्दो के अंत मे s, ss, sh, ch, o तथा x आया हो उन मे es लगाकर बहुवचन बनाते है ।\nExample: Class - Classes",
-                        "3. जिन शब्दो के अंत मे y आया हो तथा y से पूर्व कोई एक consonant आया हो तो बहुवचन बनाते समय y को i मे बदल कर es लगा देते है ।\nExample: Story - Stories",
-                        "4. जिन शब्दो के अंत मे y हो तथा y से पहले कोई एक vowel हो तो plural बनाते समय y नहीं हटाते है और अंत मे s लगा देते है ।\nExample: Key - Keys",
-                        "5. जिन शब्दों के अंत मे f या fe आया हो तो plural बनाते समय f या fe को हटा कर ves कर देते है ।\nExample: Calf - Calves",
-                        "6. जिन शब्दों के अंत मे f या fe आया हो तथा f या fe के पूर्व एक जैसे double vowel आये हो तो plural बनाते समय f या fe को नहीं हटते है और s जोड़ देते है ।\nExample: Proof - proofs",
-                        "7. जिन शब्दों के अंत मे eo, io, yo, oo आया हो उन शब्दों का plural बनाने के लिए शब्द के अंत मे s लगा देते है ।\nExample: Bamboo - Bamboos",
-                        "8. कुछ शब्दों के अंत मे en या ren लगा कर plural बनाते है ।\nExample: Ox - Oxen",
-                        "9. कुछ संज्ञाओं के Singular से plural अलग-अलग बनते है इन मे अक्षर बदले जाते है ।\nExample: Man - Men, Mouse - Mice",
-                        "10. जो संज्ञा दो या दो से अधिक शब्दों से मिलकर बनी हो तो संज्ञाओ का plural बनाने के लिए मुख्य शब्द के अंत मे s लगाते है ।\nExample: Father-in-law = Fathers-in-law",
-                        "11. कुछ संज्ञाएँ singular और plural दोनो स्थिति मे एक जैसी रहती है ।\nExample: Sheep, Fish, Deer",
-                        "12. कुछ संज्ञाओं का प्रयोग हमेशा बहुवचन मे किया जाता है ।\nExample: People, Cattle, Folk",
-                        "13. कुछ संज्ञाएँ देखने मे तो बहुवचन है लेकिन उन का प्रयोग हमेशा एक वचन मे होता है ।\nExample: News, Mathematics, Physics",
-                        "14. संख्या का plural बनाने के लिए संख्या मे Apostrophe ('s) लगाते है ।\nExample: 7 - 7's"
+                        "1. अधिकांश शब्दों के अंत मे s लगा कर singular से plural बनाते है ।\nExample:\nBook - Books",
+                        "2. जिन शब्दो के अंत मे s, ss, sh, ch, o तथा x आया हो उन मे es लगाकर बहुवचन बनाते है ।\nExample:\nClass - Classes",
+                        "3. जिन शब्दो के अंत मे y आया हो तथा y से पूर्व कोई एक consonant आया हो तो बहुवचन बनाते समय y को i मे बदल कर es लगा देते है ।\nExample:\nStory - Stories",
+                        "4. जिन शब्दो के अंत मे y हो तथा y से पहले कोई एक vowel हो तो plural बनाते समय y नहीं हटाते है और अंत मे s लगा देते है ।\nExample:\nKey - Keys",
+                        "5. जिन शब्दों के अंत मे f या fe आया हो तो plural बनाते समय f या fe को हटा कर ves कर देते है ।\nExample:\nCalf - Calves",
+                        "6. जिन शब्दों के अंत मे f या fe आया हो तथा f या fe के पूर्व एक जैसे double vowel आये हो तो plural बनाते समय f या fe को नहीं हटते है और s जोड़ देते है ।\nExample:\nProof - proofs",
+                        "7. जिन शब्दों के अंत मे eo, io, yo, oo आया हो उन शब्दों का plural बनाने के लिए शब्द के अंत मे s लगा देते है ।\nExample:\nBamboo - Bamboos",
+                        "8. कुछ शब्दों के अंत मे en या ren लगा कर plural बनाते है ।\nExample:\nOx - Oxen\nChild - Children",
+                        "9. कुछ संज्ञाओं के Singular से plural अलग-अलग बनते है इन मे अक्षर बदले जाते है ।\nExample:\nMan - Men\nMouse - Mice",
+                        "10. जो संज्ञा दो या दो से अधिक शब्दों से मिलकर बनी हो तो संज्ञाओ का plural बनाने के लिए मुख्य शब्द के अंत मे s लगाते है ।\nExample:\nFather-in-law = Fathers-in-law",
+                        "11. कुछ संज्ञाएँ singular और plural दोनो स्थिति मे एक जैसी रहती है ।\nExample:\nSheep\nFish\nDeer",
+                        "12. कुछ संज्ञाओं का प्रयोग हमेशा बहुवचन मे किया जाता है ।\nExample:\nPeople\nCattle\nFolk",
+                        "13. कुछ संज्ञाएँ देखने मे तो बहुवचन है लेकिन उन का प्रयोग हमेशा एक वचन मे होता है ।\nExample:\nNews\nMathematics\nPhysics",
+                        "14. संख्या का plural बनाने के लिए संख्या मे Apostrophe ('s) लगाते है ।\nExample:\n7 - 7's"
                     )
                     rules.forEachIndexed { index, it -> ColoredPoint(it, index + 5) }
                 }
@@ -170,10 +170,10 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 ContentSection(title = "Gender (लिंग)", titleColor = Color(0xFF7B1FA2)) {
                     Text("Gender चार प्रकार के होते है -", fontSize = 15.sp, color = Color.Black)
                     val genders = listOf(
-                        "1. Masculine Gender (पुलिंग): जो संज्ञा नर जाति को दर्शाती है । (Example: Man, Boy, King)",
-                        "2. Feminine Gender (स्त्री लिंग): वे संज्ञाएँ जो स्त्री जाति का बोध कराती है । (Example: Girl, Women, Queen)",
-                        "3. Neuter Gender (नपुंसक लिंग): वे संज्ञाए जो अचेतन पदार्थ हेतु या वे जिन मे जान नहीं होती है । (Example: Stone, Book, Pen)",
-                        "4. Common Gender (उभय लिंग): वे संज्ञाएँ जो पुरुष एवं स्त्री दोनों के लिए उपयोग मे लायी जाती है । (Example: Baby, Parents)"
+                        "1. Masculine Gender (पुलिंग): जो संज्ञा नर जाति को दर्शाती है ।\nExample:\nMan, Boy, King",
+                        "2. Feminine Gender (स्त्री लिंग): वे संज्ञाएँ जो स्त्री जाति का बोध कराती है ।\nExample:\nGirl, Women, Queen",
+                        "3. Neuter Gender (नपुंसक लिंग): वे संज्ञाए जो अचेतन पदार्थ हेतु या वे जिन मे जान नहीं होती है ।\nExample:\nStone, Book, Pen",
+                        "4. Common Gender (उभय लिंग): वे संज्ञाएँ जो पुरुष एवं स्त्री दोनों के लिए उपयोग मे लायी जाती है ।\nExample:\nBaby, Parents"
                     )
                     genders.forEachIndexed { index, it -> ColoredPoint(it, index) }
                     
@@ -217,10 +217,10 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 ContentSection(title = "Case (कारक)", titleColor = Color(0xFF1976D2)) {
                     Text("Case चार प्रकार के होते है:", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.Black)
                     val cases = listOf(
-                        "1. Nominative Case (कर्ता कारक)", 
-                        "2. Objective Case (कर्म कारक)", 
-                        "3. Possessive Case (सम्बन्ध कारक)", 
-                        "4. Vocative Case (सम्बोधन कारक)"
+                        "1. Nominative Case (कर्ता कारक)\nExample:\nRam is playing.", 
+                        "2. Objective Case (कर्म कारक)\nExample:\nHe likes mangoes.", 
+                        "3. Possessive Case (सम्बन्ध कारक)\nExample:\nThis is Mohan's house.", 
+                        "4. Vocative Case (सम्बोधन कारक)\nExample:\nCome here, Sita."
                     )
                     cases.forEachIndexed { index, it -> ColoredPoint(it, index + 2) }
                 }
@@ -231,11 +231,15 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 ContentSection(title = "Pronoun (सर्वनाम)", titleColor = Color(0xFF388E3C)) {
                     Text("Pronoun 9 प्रकार के होते है:", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.Black)
                     val pronouns = listOf(
-                        "1. Personal Pronoun (व्यक्ति वाचक सर्वनाम)", "2. Demonstrative Pronoun (संकेत वाचक सर्वनाम)",
-                        "3. Relative Pronoun (सम्बंद वाचक सर्वनाम)", "4. Interrogative Pronoun (प्रश्न वाचक सर्वनाम)",
-                        "5. Indefinite Pronoun (अनिश्चय वाचक सर्वनाम)", "6. Distributive Pronoun (विभाग वाचक सर्वनाम)",
-                        "7. Reflexive Pronoun (निज वाचक सर्वनाम)", "8. Emphatic Pronoun (निश्चय वाचक सर्वनाम)",
-                        "9. Exclamatory Pronoun (विसमय बोधक सर्वनाम)"
+                        "1. Personal Pronoun (व्यक्ति वाचक सर्वनाम) - I, We, You, He, She, It, They.",
+                        "2. Demonstrative Pronoun (संकेत वाचक सर्वनाम) - This, That, These, Those.",
+                        "3. Relative Pronoun (सम्बंद वाचक सर्वनाम) - Who, Whom, Whose, Which, That.",
+                        "4. Interrogative Pronoun (प्रश्न वाचक सर्वनाम) - Who, Which, What, Whom.",
+                        "5. Indefinite Pronoun (अनिश्चय वाचक सर्वनाम) - One, Some, Any, All, None.",
+                        "6. Distributive Pronoun (विभाग वाचक सर्वनाम) - Each, Either, Neither.",
+                        "7. Reflexive Pronoun (निज वाचक सर्वनाम) - Myself, Yourself, Himself.",
+                        "8. Emphatic Pronoun (निश्चय वाचक सर्वनाम) - Myself, Yourself (Used for emphasis).",
+                        "9. Exclamatory Pronoun (विसमय बोधक सर्वनाम) - What!"
                     )
                     pronouns.forEachIndexed { index, it -> ColoredPoint(it, index) }
                 }

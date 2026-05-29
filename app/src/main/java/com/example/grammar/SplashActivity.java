@@ -1,14 +1,18 @@
 package com.example.grammar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
+import java.util.Calendar;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -22,6 +26,13 @@ public class SplashActivity extends AppCompatActivity {
         WindowCompat.getInsetsController(window, window.getDecorView()).setAppearanceLightStatusBars(true);
 
         setContentView(R.layout.activity_splash);
+
+        // Update dynamic copyright year
+        TextView tvCopyright = findViewById(R.id.tvCopyrightSplash);
+        if (tvCopyright != null) {
+            int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+            tvCopyright.setText(getString(R.string.copyright_notice, currentYear));
+        }
 
         // Delay for 1.5 seconds then transition to NavigationActivity
         new Handler(Looper.getMainLooper()).postDelayed(() -> {

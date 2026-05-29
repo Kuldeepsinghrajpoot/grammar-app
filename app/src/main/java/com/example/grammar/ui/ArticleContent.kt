@@ -128,13 +128,13 @@ fun ArticleContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {}) 
 
                     Spacer(modifier = Modifier.height(12.dp))
                     val theRules = listOf(
-                        "1. The का प्रयोग उस समय होता है जब किसी प्राणी या वस्तु अथवा जिसका पहले उल्लेख हो चुका हो या जिससे वक्ता परिचित हो, के बारे मे बात करते हैं |",
-                        "2. प्राकृतिक सम्पदा जैसे नदी, पहाड़, समुद्र, रेगिस्तान आदि कुछ देश प्रांत भौगोलिक नाम के पहले लगाते हैं |",
-                        "3. एक वचन common noun जब वे समस्त जाति के लिए हों |\nExample:\nThe dog is a faithful animal.",
-                        "4. धार्मिक ग्रंथों, चारों दिशाओं, कुछ वस्तुये जो केवल संसार मे एक हो, Superlative Degree, मुख्य घटनाये समाचार पत्रों प्रसिद्ध इमारतों, आवागमन के साधन के पूर्व करते हैं |",
-                        "5. Adjective से पहले The का प्रयोग होता है| जब वह Noun की तरह प्रयोग होता है और उस adjective के बाद कोई noun नहीं आता है |\nExample:\nThe rich are not always kind.",
-                        "6. All और Both के पश्चात तथा Whole के पूर्व 'The' का प्रयोग होता है |",
-                        "7. देशों के नामों के पूर्व 'The' लगने से वहाँ के व्यक्तियों का बोध होता है तथा प्रयोग न होने से उस शब्द से उस देश की भाषा का बोध होता है |\nExample:\nThe English (अँग्रेज़)\nEnglish (भाषा)"
+                        "1. The का प्रयोग उस समय होता है जब किसी प्राणी या वस्तु अथवा जिसका पहले उल्लेख हो चुका हो या जिससे वक्ता परिचित हो, के बारे मे बात करते हैं |\nExample:\nI saw a boy. The boy was very tall.\n(मैंने एक लड़का देखा। वह लड़का बहुत लंबा था।)",
+                        "2. प्राकृतिक सम्पदा जैसे नदी, पहाड़, समुद्र, रेगिस्तान आदि कुछ देश प्रांत भौगोलिक नाम के पहले लगाते हैं |\nExample:\nThe Ganges, The Himalayas, The Pacific Ocean, The Sahara.",
+                        "3. एक वचन common noun जब वे समस्त जाति के लिए हों |\nExample:\nThe dog is a faithful animal.\n(कुत्ता एक वफादार जानवर होता है।)",
+                        "4. धार्मिक ग्रंथों, चारों दिशाओं, कुछ वस्तुये जो केवल संसार मे एक हो, Superlative Degree, मुख्य घटनाये समाचार पत्रों प्रसिद्ध इमारतों, आवागमन के साधन के पूर्व करते हैं |\nExample:\nThe Ramayana, The East, The Sun, The Best, The Taj Mahal, The Rajdhani Express.",
+                        "5. Adjective से पहले The का प्रयोग होता है| जब वह Noun की तरह प्रयोग होता है और उस adjective के बाद कोई noun नहीं आता है |\nExample:\nThe rich are not always kind.\n(अमीर हमेशा दयालु नहीं होते।)",
+                        "6. All और Both के पश्चात तथा Whole के पूर्व 'The' का प्रयोग होता है |\nExample:\nAll the boys are present.\nBoth the brothers are honest.\nThe whole world is beautiful.",
+                        "7. देशों के नामों के पूर्व 'The' लगने से वहाँ के व्यक्तियों का बोध होता है तथा प्रयोग न होने से उस शब्द से उस देश की भाषा का बोध होता है |\nExample:\nThe English\n(अँग्रेज़)\n\nEnglish\n(भाषा)"
                     )
                     theRules.forEachIndexed { index, text -> ColoredPoint(text, index) }
                 }
@@ -162,9 +162,9 @@ fun ArticleContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {}) 
                         "8. उन Nouns के पहले जो देखने मे Singular हैं, लेकिन sense मे Plural हो Article का use नहीं होता है |\nExample:\nAdvice, Cattle.",
                         "9. उन noun के पहले जो compliments हों |\nExample:\nThey made him emperor.",
                         "10. जब two और more adjective एक ही noun को Qualify करें और वे ‘And’ से जुड़े हों तो Article पहले वाले adjective के पूर्व ही आता है |\nExample:\nThe red and white flower.\n(The red and the white flower. - Wrong)",
-                        "11. जब दो या दो से अधिक adjective different nouns को qualify करें तो Article प्रत्येक adjective के पहले होता है |\nExample:\nThe red and the white flower.\n(इसका means है कि two फूल एक लाल और दूसरा सफ़ेद रंग का है |)",
+                        "11. जब दो या दो से अधिक adjective different nouns को qualify करें तो Article प्रत्येक adjective के पहले होता है |\nExample:\nThe red and the white flower.\n(इसका मतलब है कि दो फूल हैं, एक लाल और दूसरा सफेद |)",
                         "Note for rule 11:\nयदि noun plural मे है तो article को repeat की आवश्यकता नहीं है |\nExample:\nThe First And Second Chapters.",
-                        "12. जब two और more Nouns different people और things से संबंध रखते हों तो Article प्रत्येक के पूर्व (before every one) आता है |\nExample:\nThe manager and the president have come.\n(यहाँ दोनों पदों पर different men हैं|)"
+                        "12. जब two और more Nouns different people और things से संबंध रखते हों तो Article प्रत्येक के पूर्व (before every one) आता है |\nExample:\nThe manager and the president have come.\n(यहाँ दोनों पदों पर अलग-अलग व्यक्ति हैं |)"
                     )
                     additionalRules.forEachIndexed { index, text -> ColoredPoint(text, index + 1) }
                 }

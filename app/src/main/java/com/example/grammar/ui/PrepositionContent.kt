@@ -122,17 +122,17 @@ fun PrepositionContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                     SubSectionTitle("Rules and Comparisons :-", Color(0xFF388E3C))
 
                     val comparisons = listOf(
-                        "1. in and at" to "(I) in का प्रयोग बड़े शहरों/स्थानों के साथ होता है, at छोटे शहरों/ग्रामों के लिए ।\n(II) in समय के भाग (Period of time) के लिए, at निश्चित समय (Point of time) के लिए ।",
-                        "2. in and into" to "in: स्थिरता (Stability) के लिए\n(He is in the house)\ninto: गति (Motion) के लिए\n(He jumped into the well).",
-                        "3. on and upon" to "on: स्थिरता/समीप संबंध\n(The book is on the table)\nupon: गति/बाहर से अंदर प्रवेश\n(The dog jumped upon the table).",
-                        "4. in and within" to "in: समय के अंत में (at the end of).\nwithin: समय सीमा से पहले (before the end of).",
-                        "5. after and in" to "after: भूतकाल (Past) में समय दिखाता है ।\nin: भविष्यकाल (Future) में समय दिखाता है ।",
-                        "6. to" to "गतिशील अवस्था के लिए प्रयोग होता है । 'to' का अर्थ प्रायः 'कि ओर' होता है ।\nExample:\nI went to school.",
-                        "7. with and by" to "with: यंत्र (Instrument) द्वारा कार्य को दिखाता है ।\nby: करने वाले (Agent/Doer) के लिए आता है ।\nExample:\nHe was killed by a robber with a gun.",
-                        "8. beside and besides" to "beside: बिल्कुल नज़दीक (by the side of).\nbesides: के अतिरिक्त (in addition to).\nExample:\nYour cow was grazing beside my field.",
-                        "9. between and among" to "between: दो व्यक्तियों/वस्तुओं के लिए ।\namong: दो से अधिक के लिए ।\nExample:\nI distribute these pens between Ram and Mohan.",
-                        "10. from, for, since" to "for: समय की अवधि (period of time).\nsince: समय का बिंदु (point of time).\nfrom: point of time बताता है, use perfect continuous को छोड़ कर सभी tenses मे होता है ।",
-                        "11. over and above" to "over: ठीक ऊपर लंबवत (Vertical).\nabove: ऊपर लेकिन लंबवत होना आवश्यक नहीं ।\nExample:\nThe plan flew over my head."
+                        "1. in and at" to "(I) in का प्रयोग बड़े शहरों/स्थानों के साथ होता है, at छोटे शहरों/ग्रामों के लिए ।\n(II) in समय के भाग (Period of time) के लिए, at निश्चित समय (Point of time) के लिए ।\n\nExample:\nHe lives in Delhi.\n(वह दिल्ली में रहता है)\n\nHe lives at Nowgong.\n(वह नौगांव में रहता है)\n\nI will come in the morning.\n(मैं सुबह आऊंगा)\n\nI will come at 5 o'clock.\n(मैं 5 बजे आऊंगा)",
+                        "2. in and into" to "in: स्थिरता (Stability) के लिए ।\ninto: गति (Motion) के लिए ।\n\nExample:\nHe is in the house.\n(वह घर में है)\n\nHe jumped into the well.\n(वह कुएं में कूद गया)",
+                        "3. on and upon" to "on: स्थिरता/समीप संबंध के लिए ।\nupon: गति/बाहर से अंदर प्रवेश के लिए ।\n\nExample:\nThe book is on the table.\n(पुस्तक मेज पर है)\n\nThe dog jumped upon the table.\n(कुत्ता मेज पर कूद गया)",
+                        "4. in and within" to "in: समय के अंत में (at the end of).\nwithin: समय सीमा से पहले (before the end of).\n\nExample:\nI will finish the work in a month.\n(मैं एक महीने में काम खत्म कर लूंगा - यानी महीने के अंत तक)\n\nI will finish the work within a month.\n(मैं एक महीने के भीतर काम खत्म कर लूंगा - यानी महीना खत्म होने से पहले)",
+                        "5. after and in" to "after: भूतकाल (Past) में समय दिखाता है ।\nin: भविष्यकाल (Future) में समय दिखाता है ।\n\nExample:\nHe came after an hour.\n(वह एक घंटे के बाद आया)\n\nI will return in an hour.\n(मैं एक घंटे में वापस आऊंगा)",
+                        "6. to" to "गतिशील अवस्था के लिए प्रयोग होता है । 'to' का अर्थ प्रायः 'कि ओर' होता है ।\nExample:\nI went to school.\n(मैं स्कूल गया)",
+                        "7. with and by" to "with: यंत्र (Instrument) द्वारा कार्य को दिखाता है ।\nby: करने वाले (Agent/Doer) के लिए आता है ।\nExample:\nHe was killed by a robber with a gun.\n(वह एक डाकू द्वारा बंदूक से मारा गया)",
+                        "8. beside and besides" to "beside: बिल्कुल नज़दीक (by the side of).\nbesides: के अतिरिक्त (in addition to).\nExample:\nYour cow was grazing beside my field.\n(तुम्हारी गाय मेरे खेत के पास चर रही थी)",
+                        "9. between and among" to "between: दो व्यक्तियों/वस्तुओं के लिए ।\namong: दो से अधिक के लिए ।\nExample:\nI distribute these pens between Ram and Mohan.\n(मैं ये पेन राम और मोहन के बीच बांटता हूं)\n\nI distribute these sweets among all the students.\n(मैं ये मिठाइयां सभी छात्रों के बीच बांटता हूं)",
+                        "10. from, for, since" to "for: समय की अवधि (period of time).\nsince: समय का बिंदु (point of time).\nfrom: point of time बताता है, use perfect continuous को छोड़ कर सभी tenses मे होता है ।\n\nExample:\nI have been playing for two hours.\n(मैं दो घंटे से खेल रहा हूँ)\n\nI have been playing since morning.\n(मैं सुबह से खेल रहा हूँ)\n\nI will start my work from tomorrow.\n(मैं कल से अपना काम शुरू करूँगा)",
+                        "11. over and above" to "over: ठीक ऊपर लंबवत (Vertical).\nabove: ऊपर लेकिन लंबवत होना आवश्यक नहीं ।\nExample:\nThe plan flew over my head.\n(विमान मेरे सिर के ऊपर से उड़ गया)"
                     )
                     
                     comparisons.forEachIndexed { index, pair ->
