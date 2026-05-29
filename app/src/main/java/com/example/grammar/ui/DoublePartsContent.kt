@@ -78,10 +78,14 @@ fun DoublePartsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                         color = Color.Black,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
-                    Column(modifier = Modifier.padding(start = 8.dp)) {
-                        BulletPoint("1. Infinitive", Color(0xFF1976D2))
-                        BulletPoint("2. Participle", Color(0xFFE64A19))
-                        BulletPoint("3. Gerund", Color(0xFF7B1FA2))
+                    
+                    val mainTypes = listOf(
+                        "1. Infinitive (To + Verb): Acts as Noun + Verb.",
+                        "2. Participle (Verb + ing/ed): Acts as Adjective + Verb.",
+                        "3. Gerund (Verb + ing): Acts as Noun + Verb."
+                    )
+                    mainTypes.forEachIndexed { index, s ->
+                        ColoredPoint(text = s, index = index)
                     }
                 }
 
@@ -94,31 +98,36 @@ fun DoublePartsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                     content = {
                         Text("Description:", fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
                         Text(
-                            text = "यह verb की first form के पहले To लगाने से बनता है । यह दो प्रकार का होता है -",
+                            text = "यह verb की first form के पहले 'To' लगाने से बनता है । यह दो प्रकार का होता है -",
                             fontSize = 16.sp,
                             color = Color.Black,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
-                        ColoredPoint("(i) Simple Infinitive", 0)
-                        ColoredPoint("(ii) Gerundial Infinitive", 1)
+                        
+                        val infSubTypes = listOf(
+                            "(i) Simple Infinitive (Use as Noun).",
+                            "(ii) Gerundial Infinitive (Use as Adjective/Adverb)."
+                        )
+                        infSubTypes.forEachIndexed { index, s ->
+                            ColoredPoint(text = s, index = index + 1)
+                        }
 
                         Spacer(modifier = Modifier.height(12.dp))
-                        SubSectionTitle("(i). Simple Infinitive", Color(0xFF388E3C))
-                        Text(text = "इसके द्वारा sentences में noun का कार्य 5 प्रकार से होता है -", fontSize = 16.sp, color = Color.Black, modifier = Modifier.padding(bottom = 8.dp))
+                        SubSectionTitle("(i). Simple Infinitive Uses", Color(0xFF388E3C))
                         
                         val infTypes = listOf(
-                            "a. subject to a verb.\nExample:\nTo sleep in the day time is harmful.",
-                            "b. object to a verb.\nExample:\nShe likes to dance.",
-                            "c. object to a preposition.\nExample:\nI am about to sleep.",
-                            "d. complement to a verb.\nExample:\nI am to go to school.",
-                            "e. case in apposition.\nExample:\nIt is doubtful for me to go to school."
+                            "a. Subject to a verb.\nExample:\nTo find fault is easy.",
+                            "b. Object to a transitive verb.\nExample:\nI like to read.",
+                            "c. Object to a preposition.\nExample:\nThe show is about to start.",
+                            "d. Complement to a verb.\nExample:\nHis ambition is to lead.",
+                            "e. Case in apposition.\nExample:\nIt is our duty to respect elders."
                         )
                         infTypes.forEachIndexed { index, text ->
-                            ColoredPoint(text = text, index = index + 2)
+                            ColoredPoint(text = text, index = index + 3)
                         }
 
                         Spacer(modifier = Modifier.height(8.dp))
-                        RuleBox("Rule: Infinitive में verb से पहले To लगा देते है कुछ verbs के बाद Infinitive to छिपा रहता है ।")
+                        RuleBox("Rule: कुछ verbs (like bid, let, make, see, hear) के बाद 'To' लुप्त (hidden) रहता है ।")
                     }
                 )
 
@@ -131,15 +140,15 @@ fun DoublePartsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                     content = {
                         Text("Description:", fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
                         Text(
-                            text = "यह verb का वह रूप है जो की verb तथा adjective दोनों का कार्य करता है ।",
+                            text = "यह verb का वह रूप है जो की verb तथा adjective दोनों का कार्य करता है । इसके 3 प्रकार है -",
                             fontSize = 16.sp,
                             color = Color.Black,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         val partTypes = listOf(
-                            "(i) Present participle: First form + ing.\nExample:\nTurning to the left.",
-                            "(ii) Past participle: Third form.\nExample:\nHe is a retired teacher.",
-                            "(iii) Perfect participle: Having + V3.\nExample:\nHaving sold his house."
+                            "(i) Present participle: (V1 + ing). यह जारी कार्य दिखाता है ।\nExample:\nI saw a flying bird.",
+                            "(ii) Past participle: (V3). यह पूर्ण कार्य दिखाता है ।\nExample:\nHe is a tired man.",
+                            "(iii) Perfect participle: (Having + V3). एक कार्य के बाद दूसरा शुरू होना ।\nExample:\nHaving finished the work, he went home."
                         )
                         partTypes.forEachIndexed { index, text ->
                             ColoredPoint(text = text, index = index)
@@ -156,16 +165,16 @@ fun DoublePartsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                     content = {
                         Text("Description:", fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
                         Text(
-                            text = "Gerund, verb में ing लगा कर बनता है और यह noun का कार्य करता है ।",
+                            text = "Gerund, verb में ing लगा कर बनता है और यह Noun का कार्य करता है ।",
                             fontSize = 16.sp,
                             color = Color.Black,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         val gerundUses = listOf(
-                            "(a) Subject to a verb:\nWalking is useful for health.",
-                            "(b) Object to a verb:\nShe likes singing songs.",
-                            "(c) Object to a preposition:\nShe is fond of dancing.",
-                            "(d) Complement to a verb:\nHis habit was abusing others."
+                            "(a) Subject to a verb:\nWalking is a good exercise.",
+                            "(b) Object to a verb:\nI love cooking.",
+                            "(c) Object to a preposition:\nHe is afraid of swimming.",
+                            "(d) Complement to a verb:\nWhat I hate most is cheating."
                         )
                         gerundUses.forEachIndexed { index, text ->
                             ColoredPoint(text = text, index = index + 3)
