@@ -81,23 +81,23 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 )
 
                 Text(
-                    text = "शब्दों को उनके कार्यों के आधार पर 8 मुख्य भागों में विभाजित किया गया है :",
+                    text = "Grammar के अनुसार शब्दो को 8 भागों मे बाँटा जाता है जिन्हे parts of Speech (शब्दो के भेद) कहते है -",
                     fontSize = 16.sp,
                     color = Color.DarkGray,
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
 
                 // 1. Definitions
-                ContentSection(title = "Definitions & Examples", titleColor = Color(0xFF1976D2)) {
+                ContentSection(title = "1. Definitions & Examples", titleColor = Color(0xFF1976D2)) {
                     val parts = listOf(
-                        Triple("1. Noun (संज्ञा)", "किसी व्यक्ति, स्थान या वस्तु के नाम को Noun कहते हैं ।", "Ram, Delhi, Book, Water."),
-                        Triple("2. Pronoun (सर्वनाम)", "Noun के स्थान पर प्रयोग होने वाले शब्दों को Pronoun कहते हैं ।", "He, She, I, You, They."),
-                        Triple("3. Verb (क्रिया)", "जिस शब्द से किसी कार्य के होने या करने का बोध हो ।", "Play, Go, Eat, Sleep."),
-                        Triple("4. Adjective (विशेषण)", "जो Noun या Pronoun की विशेषता बतलाते हैं ।", "Good, Tall, Brave, Red."),
-                        Triple("5. Adverb (क्रिया विशेषण)", "जो Verb, Adjective या दूसरे Adverb की विशेषता बतलाते हैं ।", "Slowly, Very, Well, Fast."),
-                        Triple("6. Preposition (सम्बन्ध सूचक)", "जो शब्द Noun/Pronoun से पहले लगकर उनका सम्बन्ध दूसरे शब्दों से बताते हैं ।", "In, On, At, With, From."),
-                        Triple("7. Conjunction (संयोजक)", "जो दो शब्दों या वाक्यों को आपस में जोड़ते हैं ।", "And, But, Or, Because."),
-                        Triple("8. Interjection (विस्मय सूचक)", "जो मन के अचानक आने वाले भावों (हर्ष, शोक, आश्चर्य) को प्रकट करें ।", "Alas! Hurrah! Wow! Oh!")
+                        Triple("1. Noun (संज्ञा)", "A noun is the name of a person, place or thing.", "Ram, Nowogong."),
+                        Triple("2. Pronoun (सर्वनाम)", "A pronoun is a word used instead of a noun.", "He, She, it."),
+                        Triple("3. Verb (क्रिया)", "A verb is a word that says something.", "Come, go."),
+                        Triple("4. Adjective (विशेषण)", "An Adjective Qualifies a noun or a pronoun.", "Beautiful, Good."),
+                        Triple("5. Adverb (क्रिया विशेषण)", "An adverb modifies a verb, adjective or another adverb.\n(क्रिया विशेषण वह है जो किसी verb, विशेषण या किसी अन्य क्रिया विशेषण की विशेषता प्रकट करते है |)", "Very, Slowly, Too, Fast."),
+                        Triple("6. Preposition (सम्बन्ध बोधक)", "Preposition is a word placed before a noun or pronoun to show its relation with some other words.", "At, On, With, From, To, Into."),
+                        Triple("7. Conjunction (संयोजक)", "Conjunction is word which joins words, clauses or sentences with each other.", "And, But, Or, Because, Either… Or, Neither… Nor."),
+                        Triple("8. Interjection (विस्मय वोधक)", "An interjection expresses the strong feeling of joy, hate, sorrow, wonder etc.", "Alas! Hurrah! Oh!")
                     )
                     
                     parts.forEachIndexed { index, (name, def, ex) ->
@@ -110,7 +110,9 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                             Column(modifier = Modifier.padding(12.dp)) {
                                 Text(name, fontWeight = FontWeight.Bold, color = Color(0xFF1976D2), fontSize = 16.sp)
                                 Text(def, fontSize = 15.sp, color = Color.Black)
-                                Text("Example: $ex", fontStyle = FontStyle.Italic, color = Color.DarkGray, fontSize = 14.sp)
+                                if (ex.isNotEmpty()) {
+                                    Text("Example:\n$ex", fontStyle = FontStyle.Italic, color = Color.DarkGray, fontSize = 14.sp)
+                                }
                             }
                         }
                     }
@@ -120,12 +122,13 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
 
                 // 2. Noun Kinds
                 ContentSection(title = "Kinds of Noun (संज्ञा के भेद)", titleColor = Color(0xFF388E3C)) {
+                    Text("Nouns have five kinds:", fontWeight = FontWeight.Bold, fontSize = 16.sp, modifier = Modifier.padding(bottom = 8.dp), color = Color.Black)
                     val kinds = listOf(
-                        "1. Proper Noun (व्यक्तिवाचक संज्ञा): किसी विशेष नाम के लिए ।\nExample:\nRam, Ganga, India.",
-                        "2. Common Noun (जातिवाचक संज्ञा): पूरी जाति का बोध कराने वाले शब्द ।\nExample:\nBoy, City, River, Book.",
-                        "3. Collective Noun (समूहवाचक संज्ञा): समूह या झुंड का बोध कराने वाले शब्द ।\nExample:\nArmy, Class, Team, Crowd.",
-                        "4. Material Noun (द्रव्यवाचक संज्ञा): धातु या पदार्थ का बोध कराने वाले शब्द ।\nExample:\nGold, Milk, Iron, Water.",
-                        "5. Abstract Noun (भाववाचक संज्ञा): गुण, दशा या कार्य का बोध कराने वाले शब्द ।\nExample:\nHonesty, Love, Poverty, Truth."
+                        "1. Proper Noun (व्यक्ति वाचक संज्ञा): किसी विशेष व्यक्ति, स्थान या वस्तु का नाम |\nExample:\nRam, Delhi, India.",
+                        "2. Common Noun (जाति वाचक संज्ञा): वह नाम जो एक ही जाति के प्रत्येक व्यक्ति या वस्तु के लिए उपयोग किया जाए |\nExample:\nBoy, City, Book, River.",
+                        "3. Collective Noun (समूह वाचक संज्ञा): व्यक्तियों या वस्तुओं के समूह का बोध कराने वाले नाम |\nExample:\nArmy, Class, Team, Crowd.",
+                        "4. Material Noun (पदार्थ वाचक संज्ञा): उन पदार्थों के नाम जिनसे वस्तुएं बनी होती हैं |\nExample:\nGold, Water, Iron, Milk.",
+                        "5. Abstract Noun (भाव वाचक संज्ञा): किसी गुण, स्थिति या कार्य का नाम जिसे हम देख या छू नहीं सकते |\nExample:\nHonesty, Love, Poverty, Youth."
                     )
                     kinds.forEachIndexed { index, it -> ColoredPoint(it, index) }
                 }
@@ -134,20 +137,29 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
 
                 // 3. Number
                 ContentSection(title = "Number (वचन)", titleColor = Color(0xFFF57C00)) {
+                    Text("अंग्रेजी भाषा मे number two प्रकार के होते है:", fontSize = 16.sp, color = Color.Black)
                     Row(modifier = Modifier.padding(vertical = 8.dp)) {
-                        BulletPoint("Singular (एक वचन)", Color.Black)
+                        BulletPoint("1. Singular (एक वचन)", Color.Black)
                         Spacer(modifier = Modifier.width(16.dp))
-                        BulletPoint("Plural (बहुवचन)", Color.Black)
+                        BulletPoint("2. Plural (बहुवचन)", Color.Black)
                     }
                     
-                    SubSectionTitle("Rules for Singular to Plural :-", Color.Black)
+                    SubSectionTitle("Change into singular to plural :-", Color.Black)
                     val rules = listOf(
-                        "1. अंत मे 's' जोड़कर ।\nExample:\nPen - Pens",
-                        "2. अंत मे s, sh, ch, x हो तो 'es' जोड़कर ।\nExample:\nBox - Boxes",
-                        "3. अंत मे y और पूर्व Consonant हो तो y हटाकर 'ies' जोड़कर ।\nExample:\nBaby - Babies",
-                        "4. अंत मे f या fe हो तो हटाकर 'ves' जोड़कर ।\nExample:\nLeaf - Leaves",
-                        "5. कुछ में स्वर (Vowel) बदलकर ।\nExample:\nFoot - Feet, Man - Men",
-                        "6. Ox मे 'en' जोड़कर Oxen बनता है तथा Child मे 'ren' जोड़कर Children बनता है ।"
+                        "1. अधिकांश शब्दों के अंत मे s लगा कर singular से plural बनाते है ।\nExample:\nBook - Books",
+                        "2. जिन शब्दो के अंत मे s, ss, sh, ch, o तथा x आया हो उन मे es लगाकर बहुवचन बनाते है ।\nExample:\nClass - Classes",
+                        "3. जिन शब्दो के अंत मे y आया हो तथा y से पूर्व कोई एक consonant आया हो तो बहुवचन बनाते समय y को i मे बदल कर es लगा देते है ।\nExample:\nStory - Stories",
+                        "4. जिन शब्दो के अंत मे y हो तथा y से पहले कोई एक vowel हो तो plural बनाते समय y नहीं हटाते है और अंत मे s लगा देते है ।\nExample:\nKey - Keys",
+                        "5. जिन शब्दों के अंत मे f या fe आया हो तो plural बनाते समय f या fe को हटा कर ves कर देते है ।\nExample:\nCalf - Calves",
+                        "6. जिन शब्दों के अंत मे f या fe आया हो तथा f या fe के पूर्व एक जैसे double vowel आये हो तो plural बनाते समय f या fe को नहीं हटते है और s जोड़ देते है ।\nExample:\nProof - proofs",
+                        "7. जिन शब्दों के अंत मे eo, io, yo, oo आया हो उन शब्दों का plural बनाने के लिए शब्द के अंत मे s लगा देते है ।\nExample:\nBamboo - Bamboos",
+                        "8. कुछ शब्दों के अंत मे en या ren लगा कर plural बनाते है ।\nExample:\nOx - Oxen\nChild - Children",
+                        "9. कुछ संज्ञाओं के Singular से plural अलग-अलग बनते है इन मे अक्षर बदले जाते है ।\nExample:\nMan - Men\nMouse - Mice",
+                        "10. जो संज्ञा दो या दो से अधिक शब्दों से मिलकर बनी हो तो संज्ञाओ का plural बनाने के लिए मुख्य शब्द के अंत मे s लगाते है ।\nExample:\nFather-in-law = Fathers-in-law",
+                        "11. कुछ संज्ञाएँ singular और plural दोनो स्थिति मे एक जैसी रहती है ।\nExample:\nSheep, Fish, Deer",
+                        "12. कुछ संज्ञाओं का प्रयोग हमेशा बहुवचन मे किया जाता है ।\nExample:\nPeople, Cattle, Folk",
+                        "13. कुछ संज्ञाएँ देखने मे तो बहुवचन है लेकिन उन का प्रयोग हमेशा एक वचन मे होता है ।\nExample:\nNews, Mathematics, Physics",
+                        "14. संख्या का plural बनाने के लिए संख्या मे Apostrophe ('s) लगाते है ।\nExample:\n7 - 7's"
                     )
                     rules.forEachIndexed { index, it -> ColoredPoint(it, index + 5) }
                 }
@@ -156,16 +168,163 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
 
                 // 4. Gender
                 ContentSection(title = "Gender (लिंग)", titleColor = Color(0xFF7B1FA2)) {
+                    Text("Gender चार प्रकार के होते है -", fontSize = 15.sp, color = Color.Black)
                     val genders = listOf(
-                        "1. Masculine (पुल्लिंग): नर जाति के लिए । (Ex: Boy, King)",
-                        "2. Feminine (स्त्रीलिंग): मादा जाति के लिए । (Ex: Girl, Queen)",
-                        "3. Common (उभयलिंग): जो नर-मादा दोनों हो सकें । (Ex: Doctor, Teacher)",
-                        "4. Neuter (नपुंसकलिंग): निर्जीव वस्तुओं के लिए । (Ex: Pen, Table)"
+                        "1. Masculine Gender (पुलिंग): जो संज्ञा नर जाति को दर्शाती है ।\nExample:\nMan, Boy, King",
+                        "2. Feminine Gender (स्त्री लिंग): वे संज्ञाएँ जो स्त्री जाति का बोध कराती है ।\nExample:\nGirl, Women, Queen",
+                        "3. Neuter Gender (नपुंसक लिंग): वे संज्ञाए जो अचेतन पदार्थ हेतु या वे जिन मे जान नहीं होती है ।\nExample:\nStone, Book, Pen",
+                        "4. Common Gender (उभय लिंग): वे संज्ञाएँ जो पुरुष एवं स्त्री दोनों के लिए उपयोग मे लायी जाती है ।\nExample:\nBaby, Parents"
                     )
                     genders.forEachIndexed { index, it -> ColoredPoint(it, index) }
+                    
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("Masculine से Feminine मे बदलने के नियम :-", Color.Black)
+                    
+                    Text("Rule 1: पूर्ण रूप से शब्द परिवर्तन", fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(vertical = 4.dp))
+                    GenderTable(listOf(
+                        "Boy" to "Girl", "King" to "Queen", "Father" to "Mother", "Uncle" to "Aunt", 
+                        "Sir" to "Madam", "Cock" to "Hen", "Dog" to "Bitch", "Son" to "Daughter", "Bull" to "Cow"
+                    ))
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text("Rule 2: ess और ss लगा कर", fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(vertical = 4.dp))
+                    GenderTable(listOf(
+                        "Prince" to "Princess", "Poet" to "Poetess", "Lion" to "Lioness", "God" to "Goddess"
+                    ))
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text("Rule 3: Consonant के पूर्व vowel हटा कर अंत मे ess जोड़ कर", fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(vertical = 4.dp))
+                    GenderTable(listOf(
+                        "Actor" to "Actress", "Master" to "Mistress", "Tiger" to "Tigress", "Emperor" to "Empress"
+                    ))
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text("Rule 4: मुख्य शब्द मे परिवर्तन कर", fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(vertical = 4.dp))
+                    GenderTable(listOf(
+                        "Grand-Father" to "Grand-Mother", "Peacock" to "Peahen", "He-Goat" to "She-Goat"
+                    ))
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text("Rule 5: अंत मे ine या a जोड़कर", fontWeight = FontWeight.Bold, color = Color.Gray, modifier = Modifier.padding(vertical = 4.dp))
+                    GenderTable(listOf(
+                        "Hero" to "Heroine", "Sultan" to "Sultana"
+                    ))
+                }
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // 5. Case
+                ContentSection(title = "Case (कारक)", titleColor = Color(0xFF1976D2)) {
+                    Text("Case चार प्रकार के होते है:", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.Black)
+                    val cases = listOf(
+                        "1. Nominative Case (कर्ता कारक)\nExample:\nRam is playing.", 
+                        "2. Objective Case (कर्म कारक)\nExample:\nHe likes mangoes.", 
+                        "3. Possessive Case (सम्बन्ध कारक)\nExample:\nThis is Mohan's house.", 
+                        "4. Vocative Case (सम्बोधन कारक)\nExample:\nCome here, Sita."
+                    )
+                    cases.forEachIndexed { index, it -> ColoredPoint(it, index + 2) }
+                }
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // 6. Pronoun Types
+                ContentSection(title = "Pronoun (सर्वनाम)", titleColor = Color(0xFF388E3C)) {
+                    Text("Pronoun 9 प्रकार के होते है:", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.Black)
+                    val pronouns = listOf(
+                        "1. Personal Pronoun (व्यक्ति वाचक सर्वनाम) - I, We, You, He, She, It, They.",
+                        "2. Demonstrative Pronoun (संकेत वाचक सर्वनाम) - This, That, These, Those.",
+                        "3. Relative Pronoun (सम्बंद वाचक सर्वनाम) - Who, Whom, Whose, Which, That.",
+                        "4. Interrogative Pronoun (प्रश्न वाचक सर्वनाम) - Who, Which, What, Whom.",
+                        "5. Indefinite Pronoun (अनिश्चय वाचक सर्वनाम) - One, Some, Any, All, None.",
+                        "6. Distributive Pronoun (विभाग वाचक सर्वनाम) - Each, Either, Neither.",
+                        "7. Reflexive Pronoun (निज वाचक सर्वनाम) - Myself, Yourself, Himself.",
+                        "8. Emphatic Pronoun (निश्चय वाचक सर्वनाम) - Myself, Yourself (Used for emphasis).",
+                        "9. Exclamatory Pronoun (विसमय बोधक सर्वनाम) - What!"
+                    )
+                    pronouns.forEachIndexed { index, it -> ColoredPoint(it, index) }
+                }
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // 7. Adjective and Degrees
+                ContentSection(title = "Comparison of Adjective (Degrees)", titleColor = Color(0xFFC62828)) {
+                    Text("विशेषण तीन प्रकार के होते है जिन्हे हम Degree के नाम से जानते है -", fontSize = 15.sp, color = Color.Black)
+                    val degs = listOf(
+                        "1. Positive Degree: साधारण गुण का बोध । (so...as / as...as)",
+                        "2. Comparative Degree: दो की तुलना । (Than)",
+                        "3. Superlative Degree: सर्वाधिक गुण होने का बोध । (The)"
+                    )
+                    degs.forEachIndexed { index, it -> ColoredPoint(it, index + 3) }
+                    
+                    Spacer(modifier = Modifier.height(14.dp))
+                    SubSectionTitle("Rules for changing Degrees :-", Color.Black)
+                    
+                    DegreeRuleSection("1. single syllable शब्द के अंत मे er तथा est जोड़ कर", listOf(
+                        listOf("Bold", "Bolder", "Boldest"), listOf("Cold", "Colder", "Coldest"), listOf("High", "Higher", "Highest")
+                    ))
+                    
+                    DegreeRuleSection("2. यदि अंत मे e लगा हो तो r तथा st लगा कर", listOf(
+                        listOf("Fine", "Finer", "Finest"), listOf("Large", "Larger", "Largest"), listOf("Wise", "Wiser", "Wisest")
+                    ))
+                    
+                    DegreeRuleSection("3. यदि अंत मे y हो और पूर्व consonant हो तो y हटा कर ier, iest जोड़ कर", listOf(
+                        listOf("Happy", "Happier", "Happiest"), listOf("Easy", "Easier", "Easiest")
+                    ))
+                    
+                    DegreeRuleSection("4. यदि अंत मे consonant हो और पूर्व vowel हो तो अंतिम अक्षर double कर er, est जोड़ कर", listOf(
+                        listOf("Big", "Bigger", "Biggest"), listOf("Fat", "Fatter", "Fattest"), listOf("Thin", "Thinner", "Thinnest")
+                    ))
+                    
+                    DegreeRuleSection("5. Double/Triple syllable शब्दों के पूर्व More तथा Most लगा कर", listOf(
+                        listOf("Beautiful", "More Beautiful", "Most Beautiful"), listOf("Careful", "More careful", "Most careful")
+                    ))
+                    
+                    DegreeRuleSection("6. कुछ शब्दों की degree अलग - अलग बनती है", listOf(
+                        listOf("Good", "Better", "Best"), listOf("Bad", "Worse", "Worst"), listOf("Little", "Less", "Least")
+                    ))
                 }
 
                 Spacer(modifier = Modifier.height(30.dp))
+            }
+        }
+    }
+}
+
+@Composable
+fun GenderTable(pairs: List<Pair<String, String>>) {
+    val borderColor = Color(0xFFCFD8DC)
+    Column(modifier = Modifier.border(1.dp, borderColor).fillMaxWidth()) {
+        Row(modifier = Modifier.background(Color(0xFF2C3E50)).fillMaxWidth()) {
+            TableCellText("Masculine", weight = 1f, isHeader = true)
+            TableCellText("Feminine", weight = 1f, isHeader = true)
+        }
+        pairs.forEachIndexed { index, pair ->
+            val bgColor = if (index % 2 == 0) Color.White else Color(0xFFECEFF1)
+            Row(modifier = Modifier.background(bgColor).fillMaxWidth()) {
+                TableCellText(pair.first, weight = 1f)
+                TableCellText(pair.second, weight = 1f)
+            }
+        }
+    }
+}
+
+@Composable
+fun DegreeRuleSection(rule: String, rows: List<List<String>>) {
+    Column(modifier = Modifier.padding(top = 12.dp)) {
+        Text(rule, fontSize = 14.sp, fontWeight = FontWeight.Medium, color = Color(0xFF455A64))
+        Spacer(modifier = Modifier.height(4.dp))
+        val borderColor = Color(0xFFCFD8DC)
+        Column(modifier = Modifier.border(1.dp, borderColor).fillMaxWidth()) {
+            Row(modifier = Modifier.background(Color(0xFF263238)).fillMaxWidth()) {
+                TableCellText("Positive", weight = 1f, isHeader = true)
+                TableCellText("Comparative", weight = 1f, isHeader = true)
+                TableCellText("Superlative", weight = 1f, isHeader = true)
+            }
+            rows.forEachIndexed { index, row ->
+                val bgColor = if (index % 2 == 0) Color.White else Color(0xFFF1F8E9)
+                Row(modifier = Modifier.background(bgColor).fillMaxWidth()) {
+                    row.forEach { text -> TableCellText(text, weight = 1f) }
+                }
             }
         }
     }

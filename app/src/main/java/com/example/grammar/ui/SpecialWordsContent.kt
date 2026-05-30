@@ -84,79 +84,63 @@ fun SpecialWordsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 )
 
                 // 1. Use of verb ‘To be’
-                ContentSection(title = "use of verb ‘To be’- is, am, are, was, were", titleColor = Color(0xFF1976D2)) {
-                    Text(
-                        text = "Be verb के कुल 5 part है - is, am, are present tense मे तथा past tense मे was, were प्रयोग होते है ।",
-                        fontSize = 16.sp,
-                        color = Color.Black
+                ContentSection(title = "Use of verb ‘To be’ (is, am, are, was, were)", titleColor = Color(0xFF1976D2)) {
+                    val toBeRules = listOf(
+                        "1. Be verb के कुल 5 part है - is, am, are (Present) तथा was, were (Past) ।",
+                        "2. यह progressive tense बनाने मे प्रयोग होती है |\nExample:\nShe is going to school.",
+                        "3. Passive voice बनाने मे |\nExample:\nA letter is being written by her.",
+                        "4. कुछ वाक्यों मे be verb helping verb नहीं बल्कि main verb के रुप मे काम करती है |\nExample:\nThey are brave.\nIs he an honest man?",
+                        "Note: be verb का progressive मे 'being' तथा participle मे 'been' होता है ।"
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text("इन का प्रयोग निम्नलिखित है -", fontWeight = FontWeight.Bold, color = Color.Gray)
-                    
-                    Text("1. यह progressive tense बनाने मे प्रयोग होती है ।", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp), color = Color.Black)
-                    ExampleItem("Example:", "She is going to school.")
-
-                    Text("2. passive voice बनाने मे ।", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp), color = Color.Black)
-                    ExampleItem("Example:", "School is being gone by her.")
-
-                    Text("3. कुछ वाक्यों मे be verb helping verb नहीं बल्कि main verb के रुप मे काम करती है ।", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp), color = Color.Black)
-                    ExampleItem("Example:", "They are brave.\nIs he an honest man?")
-                    
-                    RuleBox("Note: be verb का progressive मे being तथा participle मे been होता है ।")
+                    toBeRules.forEachIndexed { index, s -> ColoredPoint(text = s, index = index) }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 2. Introductory ‘It’
                 ContentSection(title = "Use of introductory ‘It’", titleColor = Color(0xFF388E3C)) {
-                    Text(
-                        text = "जिन वाक्यों मे वास्तविक कर्ता न हो उन वाक्यों मे subject के स्थान पर It का प्रयोग होता है । जिन वाक्यों मे समय, दिन, मौसम, वर्षा, प्राकृतिक घटना का वर्णन हो अथवा बात पर जोर दिया जाये तो उन्हें It से प्रारंभ करते है ।",
-                        fontSize = 15.sp,
-                        color = Color.Black
+                    val itRules = listOf(
+                        "1. जिन वाक्यों मे वास्तविक कर्ता (Subject) न हो उन वाक्यों मे It का प्रयोग होता है ।",
+                        "2. समय, दिन, मौसम, वर्षा, प्राकृतिक घटना का वर्णन करने के लिए |\nExample:\nIt is 6 o’clock. (समय)\nIt is Sunday today. (दिन)\nIt is hot today. (मौसम)\nIt is raining heavily. (वर्षा)\nIt is growing dark. (प्राकृतिक घटना)",
+                        "3. किसी बात पर जोर देने के लिए |\nExample:\nIt was I who did this work."
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    ExampleItem("Example:", "It is 6 o’clock. (समय)\nIt is Sunday today. (दिन)\nIt is hot today. (मौसम)\nIt is raining heavily. (वर्षा)\nIt is growing dark. (प्राकृतिक घटना)\nIt was I who did this work. (जोर, बल)")
+                    itRules.forEachIndexed { index, s -> ColoredPoint(text = s, index = index + 1) }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 3. Use of have
-                ContentSection(title = "Use of have", titleColor = Color(0xFFF57C00)) {
-                    Text("इस verb के निम् use है -", fontWeight = FontWeight.Medium, color = Color.Black)
-                    
-                    Text("1. इस का प्रयोग perfect tense बनाने मे किया जाता है ।", fontSize = 14.sp, modifier = Modifier.padding(top = 8.dp), color = Color.Black)
-                    ExampleItem("Example:", "He has eaten a mango.")
-
-                    Text("2. जब verb का अर्थ किसी वस्तु को अधिकार मे रखना हो तो इस अर्थ मे वह मुख्य क्रिया होती है । इस लिए इस क्रिया के Negative तथा Interrogative मे प्रायः do, does, did का प्रयोग होता है ।", fontSize = 14.sp, modifier = Modifier.padding(top = 8.dp), color = Color.Black)
-                    ExampleItem("Example:", "I have a pen.\nI had a pen.\nDoes he have much money?")
-                    
-                    RuleBox("Note: वाक्य मे tense एवं कर्ता के अनुसार has, have, had, will have, shall have का प्रयोग होता है ।")
+                ContentSection(title = "Use of have (has, have, had)", titleColor = Color(0xFFF57C00)) {
+                    val haveRules = listOf(
+                        "1. इस का प्रयोग Perfect tense बनाने मे किया जाता है |\nExample:\nHe has eaten a mango.",
+                        "2. जब verb का अर्थ किसी वस्तु को अधिकार मे रखना (Possession) हो |\nExample:\nI have a pen.\nI had a car.",
+                        "3. अधिकार के अर्थ मे Negative/Interrogative मे do, does, did का प्रयोग होता है |\nExample:\nDoes he have much money?",
+                        "Note: कर्ता एवं Tense के अनुसार has, have, had, will have, shall have का प्रयोग होता है ।"
+                    )
+                    haveRules.forEachIndexed { index, s -> ColoredPoint(text = s, index = index + 2) }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 4. Introductory ‘There’
                 ContentSection(title = "Use of introductory ‘There’", titleColor = Color(0xFF7B1FA2)) {
-                    Text(
-                        text = "जिन वाक्यों मे किसी बात का होना या न होना पाया जाये और प्रकृतिक घटना न हो तो ऐसे वाक्यों को There से प्रारंभ करते है । जो शब्द subject या object का कार्य करते है उन्हें verb के बाद रखते है इन मे There का कोई अर्थ नहीं होता । There के बाद verb बहुधा is, am, was, were का use होता है । कभी कभी There के साथ will be, shall be तथा past indefinite tense मे भी use होता है ।",
-                        fontSize = 15.sp,
-                        color = Color.Black
+                    val thereRules = listOf(
+                        "1. जिन वाक्यों मे किसी बात का होना या न होना पाया जाये और प्रकृतिक घटना न हो तो 'There' से प्रारंभ करते है ।",
+                        "2. 'There' का अपना कोई अर्थ नहीं होता, इसे केवल introductory subject की तरह use करते है ।",
+                        "3. 'There' के बाद verb (is, am, was, were) subject के अनुसार आती है |\nExample:\nThere are fifty boys in my class.\nWere there players in the field?\nOnce there was a cruel king.\nThere lived an old man in a village.\nThere will be no meeting in the hall."
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    ExampleItem("Example:", "1. There are fifty boys in my class\n2. Were there players in the field?\n3. Once there was a cruel king.\n4. There lived an old man in a village.\n5. There will be no meeting in the hall.")
+                    thereRules.forEachIndexed { index, s -> ColoredPoint(text = s, index = index + 3) }
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 5. ‘Have’ + ‘To’ infinitive
                 ContentSection(title = "Use of ‘Have’ + ‘To’ infinitive", titleColor = Color(0xFFC62828)) {
-                    Text(
-                        text = "Main verb से पहले present tense मे has to, have to तथा past tense मे had to का प्रयोग होता है तो उन हिंदी वाक्यों का अर्थ पड़ा, पड़ी, पड़े, पड़ता है, बढ़ती है, पड़ते है अथवा मज़बूरी प्रकट होती है ।",
-                        fontSize = 15.sp,
-                        color = Color.Black
+                    val haveToRules = listOf(
+                        "1. मज़बूरी (Compulsion) प्रकट करने के लिए Present मे 'has to/have to' तथा Past मे 'had to' का प्रयोग होता है ।",
+                        "2. हिंदी अर्थ मे 'पड़ा, पड़ी, पड़े, पड़ता है, पड़ती है' आदि शब्द आते है |\nExample:\nउसे जाना पड़ता है |\nHe has to go.\n\nक्या आप को सुबह 4 बजे उठना पड़ता था ?\nDid you have to get up at 4 am?"
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    ExampleItem("Example:", "उसे जाना पड़ता है ।\nHe has to go.\n\nक्या आप को प्रतिदिन सुबह 4 बजे उठना पड़ता था ?\nDid you have to get up at 4am daily?")
+                    haveToRules.forEachIndexed { index, s -> ColoredPoint(text = s, index = index + 4) }
                 }
 
                 Spacer(modifier = Modifier.height(40.dp))

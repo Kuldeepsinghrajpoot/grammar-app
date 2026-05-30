@@ -75,7 +75,7 @@ fun SentenceContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {})
                 )
 
                 Text(
-                    text = "Sentence के मुख्य दो वर्गीकरण हैं -",
+                    text = "sentence दो प्रकार के होते है -",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Medium,
                     modifier = Modifier.padding(bottom = 16.dp),
@@ -83,11 +83,12 @@ fun SentenceContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {})
                 )
 
                 // 1. Structure View
-                ContentSection(title = "1. रचना की दृष्टि से (Structure)", titleColor = Color(0xFF1976D2)) {
+                ContentSection(title = "1. रचना की दृष्टि से sentence :-", titleColor = Color(0xFF1976D2)) {
+                    Text("रचना की दृष्टि से sentence तीन प्रकार के होते है -", fontSize = 15.sp, color = Color.DarkGray, modifier = Modifier.padding(bottom = 8.dp))
                     val points = listOf(
-                        "1. Simple sentence (साधारण वाक्य): इसमें एक ही subject और एक ही finite verb होती है |\nExample:\nHe reads a book.",
-                        "2. Complex sentence (मिश्र वाक्य): इसमें एक Principal clause और कम से कम एक Subordinate clause होता है |\nExample:\nI know that he is honest.",
-                        "3. Compound sentence (संयुक्त वाक्य): इसमें कम से कम दो independent clauses होते हैं जो Coordinating conjunction से जुड़े होते हैं |\nExample:\nHe is poor but he is honest."
+                        "1. Simple sentence. (साधारण वाक्य )",
+                        "2. Complex sentence. (मिश्र वाक्य )",
+                        "3. Compound sentence. (संयुक्त वाक्य )"
                     )
                     points.forEachIndexed { index, point ->
                         ColoredPoint(text = point, index = index)
@@ -97,13 +98,14 @@ fun SentenceContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {})
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 2. Meaning View
-                ContentSection(title = "2. अर्थ की दृष्टि से (Meaning)", titleColor = Color(0xFF388E3C)) {
+                ContentSection(title = "2. अर्थ की दृष्टि से sentence :-", titleColor = Color(0xFF388E3C)) {
+                    Text("अर्थ की दृष्टि से वाक्य 5 प्रकार के होते है -", fontSize = 15.sp, color = Color.DarkGray, modifier = Modifier.padding(bottom = 8.dp))
                     val types = listOf(
-                        "1. Assertive Sentence (कथनात्मक वाक्य )",
-                        "2. Interrogative sentence (प्रश्नवाचक वाक्य )",
-                        "3. Imperative sentence (आज्ञा सूचक वाक्य )",
-                        "4. Exclamatory sentence (विस्मय सूचक वाक्य )",
-                        "5. Optative sentence (इच्छा सूचक वाक्य )"
+                        "1. Assertive Sentence (Simple sentence).",
+                        "2. Interrogative sentence.",
+                        "3. Imperative sentence. (आज्ञा सूचक वाक्य )",
+                        "4. Exclamatory sentence. (विस्मय सूचक वाक्य )",
+                        "5. Optative sentence. (इच्छा सूचक वाक्य )"
                     )
                     types.forEachIndexed { index, type ->
                         ColoredPoint(text = type, index = index + 3)
@@ -113,39 +115,40 @@ fun SentenceContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {})
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 3. Assertive Detail
-                ContentSection(title = "1. Assertive Sentence", titleColor = Color(0xFFF57C00)) {
-                    Text("ये दो प्रकार के होते है -", fontSize = 15.sp, color = Color.Black, modifier = Modifier.padding(bottom = 8.dp))
-                    ColoredPoint("(i). Affirmative sentence.\nEx: Ram goes to school.", 0)
-                    ColoredPoint("(ii). Negative sentence.\nEx: Ram does not go to school.", 1)
+                ContentSection(title = "1. Assertive Sentence (Simple sentence.):-", titleColor = Color(0xFFF57C00)) {
+                    Text("simple sentence दो प्रकार के होते है -", fontSize = 15.sp, color = Color.Black, modifier = Modifier.padding(bottom = 8.dp))
+                    ColoredPoint("(i). Affirmative sentence.", 0)
+                    ColoredPoint("(ii). Negative sentence.", 1)
+                    
+                    Spacer(modifier = Modifier.height(12.dp))
+                    RuleBox("Note:- Affirmative , Negative तथा Interrogative का अध्ययन tense बाले भाग मे है |")
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 4. Imperative Detail
-                ContentSection(title = "3. Imperative Sentence (आज्ञा सूचक)", titleColor = Color(0xFF7B1FA2)) {
+                ContentSection(title = "3. Imperative Sentence :-", titleColor = Color(0xFF7B1FA2)) {
                     SubSectionTitle("Rule :-", Color(0xFF7B1FA2))
                     val rules = listOf(
-                        "1. इसमें आज्ञा (order), प्रार्थना (request), या परामर्श (advice) का बोध होता है ।",
-                        "2. Subject 'you' हमेशा छिपा रहता है ।",
-                        "3. वाक्य verb के मूल रूप से प्रारम्भ होता है ।",
-                        "4. प्रार्थना हेतु Please या Kindly लगाते हैं ।",
-                        "5. 'Let' का प्रयोग प्रस्ताव या अनुमति हेतु होता है ।"
+                        "1. Imperative sentence से आज्ञा (order command), प्रार्थना (request), परामर्श (advice) या किसी से कुछ कहने के लिए, का बोध होता है ।",
+                        "2. ऐसे Sentence मे subject 'you' छिपा रहता है ।",
+                        "3. इस प्रकार के वाक्यों मे verb अपने मूल रूप का ही प्रयोग करती है और उसे वाक्य के प्रारम्भ मे लिखते है ।\nExample:\n• Read good books.\n• Bring me a cup of hot tea.\n• Respect your parents and elders.",
+                        "4. प्रार्थना वाले वाक्यों मे कृपया या कृपा करके लगा रहता है जिन की अंग्रेजी 'Please' होती है ।\nExample:\n• Please lend me 50 rupees.\n• Please tell me your name.",
+                        "5. यदि वाक्य मे vocative case का noun है तो वह sentence के प्रारम्भ मे या अंत मे use किया जा सकता है ।\nExample:\nMohan, stand up on the table.",
+                        "6. जहाँ सुझाव या प्रस्ताव का भाव हो तो वहाँ 'let' का प्रयोग किया जाता है । यदि वाक्य के अंत मे 'दो' शब्द आया हो तो 'let' से बनाते है ।\nExample:\n• उसे घर जाने दो |\n  Let him go home.\n• आओ हम बाजार चले |\n  Let us go to the market."
                     )
                     rules.forEachIndexed { index, rule ->
                         ColoredPoint(text = rule, index = index + 2)
                     }
-                    
-                    Spacer(modifier = Modifier.height(12.dp))
-                    ExampleItem("Examples:", "• Read good books.\n• Please lend me some money.\n• उसे घर जाने दो ।\n  Let him go home.\n• आओ हम बाजार चले ।\n  Let us go to the market.")
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 5. Negative Imperative
-                ContentSection(title = "Negative (Imperative)", titleColor = Color(0xFFC62828)) {
+                ContentSection(title = "Negative Sentence (Imperative) :-", titleColor = Color(0xFFC62828)) {
                     val negPoints = listOf(
-                        "निषेध हेतु 'Do not' + V1 लगाते हैं ।",
-                        "कभी नहीं के लिए 'Never' + V1 लगाते हैं ।"
+                        "अगर वाक्य मे 'मत' या 'न' आया हो तो सबसे पहले 'do not' लगाते है इस के बाद verb की first form आती है ।",
+                        "यदि वाक्य मे 'कभी मत' या 'कभी न' आया हो तो उस के लिए 'never' लगा कर verb की first form लगाते है ।"
                     )
                     negPoints.forEachIndexed { index, point ->
                         ColoredPoint(text = point, index = index + 4)
@@ -157,24 +160,25 @@ fun SentenceContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = {})
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 6. Exclamatory Detail
-                ContentSection(title = "4. Exclamatory sentence (विस्मय सूचक)", titleColor = Color(0xFF1976D2)) {
+                ContentSection(title = "4. Exclamatory sentence (विस्मय सूचक वाक्य ) :-", titleColor = Color(0xFF1976D2)) {
+                    Text("इस प्रकार के वाक्यों मे दुःख, प्रसन्नता, दया, क्रोध, आश्चर्य आदि भाव होते है ।", fontSize = 14.sp, color = Color.Black, modifier = Modifier.padding(bottom = 8.dp))
                     val excRules = listOf(
-                        "इसमें दुःख, हर्ष, या आश्चर्य का भाव होता है ।",
-                        "विस्मयादिबोधक चिन्ह ( ! ) का प्रयोग अनिवार्य है ।",
-                        "What या How से अधिकता प्रकट की जाती है ।"
+                        "इन वाक्यों के अंत मे प्रायः सम्बोधन का चिन्ह ( ! ) लगता है ।",
+                        "वाक्यों के साथ alas, ah, hurrah आदि interjection का भी प्रयोग करते है ।",
+                        "इन वाक्यों से 'कितना', 'कैसा' के प्रयोग से अधिकता प्रकट होती है । इन शब्दो के अनुवाद के लिए वाक्य के प्रारम्भ मे what या how का प्रयोग किया जाता है ।"
                     )
                     excRules.forEachIndexed { index, rule ->
                         ColoredPoint(text = rule, index = index)
                     }
                     
-                    ExampleItem("Examples:", "• वह कितना कमजोर है !\n  How weak he is !\n• अहा ! हम सब पास है ।\n  Ah! all of us have passed.")
+                    ExampleItem("Examples:", "• वह कितना कमजोर है !\n  How weak he is !\n• तुम कितने चतुर लड़के हो !\n  What a clever boy you are.\n• अहा ! हम सब पास है |\n  Ah! all of us have passed.")
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
                 // 7. Optative Detail
-                ContentSection(title = "5. Optative sentence (इच्छा सूचक)", titleColor = Color(0xFF388E3C)) {
-                    ColoredPoint("इसमें ईश्वर से प्रार्थना या इच्छा प्रकट होती है । 'May' से प्रारम्भ होता है ।", 1)
+                ContentSection(title = "5. Optative sentence (इच्छा सूचक वाक्य ) :-", titleColor = Color(0xFF388E3C)) {
+                    ColoredPoint("ईश्वर से प्रार्थना अथवा इच्छा प्रकट करने वाले वाक्यों को Optative (इच्छा सूचक) कहते है । इन वाक्यों को 'may' से प्रारंभ करते है तथा वाक्य के अंत मे चिन्ह ( ! ) लगाते है ।", 1)
                     
                     ExampleItem("Example:", "भगवान तुम्हें लंबी आयु दे !\nMay you live long !")
                 }

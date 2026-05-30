@@ -66,123 +66,115 @@ fun DoublePartsContent(modifier: Modifier = Modifier, onBackClick: () -> Unit = 
                     .verticalScroll(rememberScrollState())
                     .padding(16.dp)
             ) {
-                // Main Intro Card with Names
-                ContentSection(
-                    title = "Double Parts of Speech",
-                    titleColor = Color(0xFFD32F2F)
-                ) {
-                    Text(
-                        text = "Double parts of speech refer to words that can act as two different parts of speech. There are three types:",
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Medium,
-                        color = Color.Black,
-                        modifier = Modifier.padding(bottom = 8.dp)
-                    )
-                    
-                    val mainTypes = listOf(
-                        "1. Infinitive (To + Verb): Acts as Noun + Verb.",
-                        "2. Participle (Verb + ing/ed): Acts as Adjective + Verb.",
-                        "3. Gerund (Verb + ing): Acts as Noun + Verb."
-                    )
-                    mainTypes.forEachIndexed { index, s ->
-                        ColoredPoint(text = s, index = index)
-                    }
+                // Main Intro
+                Text(
+                    text = "Double Parts of Speech",
+                    fontSize = 28.sp,
+                    fontWeight = FontWeight.ExtraBold,
+                    color = Color(0xFFD32F2F),
+                    modifier = Modifier.padding(bottom = 12.dp)
+                )
+
+                val mainList = listOf("1. Infinitive", "2. Participle", "3. Gerund")
+                mainList.forEachIndexed { index, s ->
+                    ColoredPoint(text = s, index = index)
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 1. Infinitive Detail
-                ContentSection(
-                    title = "1. Infinitive",
-                    titleColor = Color(0xFF1976D2),
-                    content = {
-                        Text("Description:", fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
-                        Text(
-                            text = "यह verb की first form के पहले 'To' लगाने से बनता है । यह दो प्रकार का होता है -",
-                            fontSize = 16.sp,
-                            color = Color.Black,
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
-                        
-                        val infSubTypes = listOf(
-                            "(i) Simple Infinitive (Use as Noun).",
-                            "(ii) Gerundial Infinitive (Use as Adjective/Adverb)."
-                        )
-                        infSubTypes.forEachIndexed { index, s ->
-                            ColoredPoint(text = s, index = index + 1)
-                        }
+                // 1. Infinitive
+                ContentSection(title = "1. Infinitive", titleColor = Color(0xFF1976D2)) {
+                    Text(
+                        text = "यह verb की first form के पहले 'To' लगाने से बनता है | यह दो प्रकार का होता है -",
+                        fontSize = 16.sp,
+                        color = Color.Black,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    ColoredPoint("(i) Simple Infinitive", 0)
+                    ColoredPoint("(ii) Gerundial Infinitive", 1)
 
-                        Spacer(modifier = Modifier.height(12.dp))
-                        SubSectionTitle("(i). Simple Infinitive Uses", Color(0xFF388E3C))
-                        
-                        val infTypes = listOf(
-                            "a. Subject to a verb.\nExample:\nTo find fault is easy.",
-                            "b. Object to a transitive verb.\nExample:\nI like to read.",
-                            "c. Object to a preposition.\nExample:\nThe show is about to start.",
-                            "d. Complement to a verb.\nExample:\nHis ambition is to lead.",
-                            "e. Case in apposition.\nExample:\nIt is our duty to respect elders."
-                        )
-                        infTypes.forEachIndexed { index, text ->
-                            ColoredPoint(text = text, index = index + 3)
-                        }
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("(i). Simple Infinitive :-", Color(0xFF388E3C))
+                    Text("इस के द्वारा sentences मे noun का कार्य 5 प्रकार से होता है -", fontSize = 15.sp, modifier = Modifier.padding(bottom = 8.dp))
+                    
+                    val simpleInfUses = listOf(
+                        "a. subject to a verb.\nExample:\nTo sleep in the day time is harmful.",
+                        "b. object to a verb.\nExample:\nShe likes to dance.",
+                        "c. object to a preposition.\nExample:\nI am about to sleep.\n(मैं सोने वाला हूँ |)",
+                        "d. complement to a verb.\nExample:\nI am to go to school.\n(मुझे स्कूल जाने को है |)",
+                        "e. case in apposition.\nExample:\nIt is doubtful for me to go to school."
+                    )
+                    simpleInfUses.forEachIndexed { index, s -> ColoredPoint(s, index + 2) }
 
-                        Spacer(modifier = Modifier.height(8.dp))
-                        RuleBox("Rule: कुछ verbs (like bid, let, make, see, hear) के बाद 'To' लुप्त (hidden) रहता है ।")
-                    }
-                )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("Rule :-", Color.Black)
+                    Text("Infinitive मे verb से पहले 'To' लगा देते है कुछ verbs के बाद Infinitive 'to' छिपा रहता है |", fontSize = 14.sp)
+                    ExampleItem("Example:", "He let me go.\n(उसने मुझे जाने दिया)")
+                    
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text("निम्नलिखित verbs के साथ 'To' का प्रयोग नहीं होता है:", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Text("bid, behold, dare, let, make, need, please, see, feel, hear.", fontSize = 14.sp, color = Color.DarkGray)
 
-                Spacer(modifier = Modifier.height(24.dp))
-
-                // 2. Participle Detail
-                ContentSection(
-                    title = "2. Participle",
-                    titleColor = Color(0xFFE64A19),
-                    content = {
-                        Text("Description:", fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
-                        Text(
-                            text = "यह verb का वह रूप है जो की verb तथा adjective दोनों का कार्य करता है । इसके 3 प्रकार है -",
-                            fontSize = 16.sp,
-                            color = Color.Black,
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
-                        val partTypes = listOf(
-                            "(i) Present participle: (V1 + ing). यह जारी कार्य दिखाता है ।\nExample:\nI saw a flying bird.",
-                            "(ii) Past participle: (V3). यह पूर्ण कार्य दिखाता है ।\nExample:\nHe is a tired man.",
-                            "(iii) Perfect participle: (Having + V3). एक कार्य के बाद दूसरा शुरू होना ।\nExample:\nHaving finished the work, he went home."
-                        )
-                        partTypes.forEachIndexed { index, text ->
-                            ColoredPoint(text = text, index = index)
-                        }
-                    }
-                )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("(ii) Gerundial infinitive :-", Color(0xFF388E3C))
+                    Text("इस के द्वारा adjective अथवा adverb का कार्य प्रकट किया जाता है | यह adjective की तरह किसी noun या pronoun को Qualify करता है, adverb की तरह किसी verb, adjective या दूसरे adverb को Modify करता है |", fontSize = 15.sp)
+                    ExampleItem("Example:", "He was frightened to see the lion.\n(वह शेर देख कर डर गया)")
+                }
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 3. Gerund Detail
-                ContentSection(
-                    title = "3. Gerund",
-                    titleColor = Color(0xFF7B1FA2),
-                    content = {
-                        Text("Description:", fontWeight = FontWeight.Bold, color = Color.Gray, fontSize = 14.sp)
-                        Text(
-                            text = "Gerund, verb में ing लगा कर बनता है और यह Noun का कार्य करता है ।",
-                            fontSize = 16.sp,
-                            color = Color.Black,
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
-                        val gerundUses = listOf(
-                            "(a) Subject to a verb:\nWalking is a good exercise.",
-                            "(b) Object to a verb:\nI love cooking.",
-                            "(c) Object to a preposition:\nHe is afraid of swimming.",
-                            "(d) Complement to a verb:\nWhat I hate most is cheating."
-                        )
-                        gerundUses.forEachIndexed { index, text ->
-                            ColoredPoint(text = text, index = index + 3)
-                        }
-                    }
-                )
+                // 2. Participle
+                ContentSection(title = "2. Participle", titleColor = Color(0xFFF57C00)) {
+                    Text("यह verb का वह रूप है जो की verb तथा adjective दोनों का कार्य करता है | हिंदी अर्थ मे verb के अंत मे कर, कर के, करते हुए, करता हुआ आदि शब्द आते है |", fontSize = 16.sp)
+                    Text("Participle 3 प्रकार का होता है -", fontWeight = FontWeight.Bold, modifier = Modifier.padding(vertical = 8.dp))
+                    
+                    val pTypes = listOf("(i) Present participle", "(ii) Past participle", "(iii) Perfect participle")
+                    pTypes.forEachIndexed { index, s -> ColoredPoint(s, index) }
 
-                Spacer(modifier = Modifier.height(32.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("(i) Present participle :-", Color(0xFF1976D2))
+                    Text("इस मे verb की first form मे ing का प्रयोग होता है और हिंदी वाक्यों मे verb के बाद कर तथा हुए शब्द आता है और वाक्य past या future tense मे होता है |", fontSize = 14.sp)
+                    ExampleItem("Example:", "Turning to the left you will reach the temple.")
+
+                    Spacer(modifier = Modifier.height(12.dp))
+                    SubSectionTitle("(ii) Past participle :-", Color(0xFF1976D2))
+                    Text("इस मे verb की third form का use complement की तरह होता है | यह present time की जानकारी देता है |", fontSize = 14.sp)
+                    ExampleItem("Example:", "He is a retired teacher.")
+
+                    Spacer(modifier = Modifier.height(12.dp))
+                    SubSectionTitle("(iii) Perfect Participle :-", Color(0xFF1976D2))
+                    Text("इस मे having के साथ verb का III form प्रयोग किया जाता है |", fontSize = 14.sp)
+                    ExampleItem("Example:", "Having sold his old house Ram bought a new one.")
+                }
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // 3. Gerund
+                ContentSection(title = "3. Gerund", titleColor = Color(0xFF7B1FA2)) {
+                    Text("इस के दो भाग होते है -", fontSize = 16.sp)
+                    ColoredPoint("(i). The gerund", 3)
+                    ColoredPoint("(ii). The verbal noun", 4)
+
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("(i) The Gerund :-", Color(0xFF388E3C))
+                    Text("Rule: Gerund, verb मे ing लगा कर बनता है और यह noun का कार्य करता है |", fontSize = 14.sp)
+                    Text("2. हिंदी अर्थ मे verb के अंत मे 'ना' आता है । (Example: टहलना, गाना) । Gerund sentence मे 4 तरह से कार्य करता है -", fontSize = 14.sp, modifier = Modifier.padding(vertical = 4.dp))
+                    
+                    val gUses = listOf(
+                        "(a.) Subject to a verb - Walking is useful for health.",
+                        "(b.) Object to a verb - She likes singing songs.",
+                        "(c.) Object to a preposition - She is fond of dancing.",
+                        "(d.) Complement to a verb - His habit was abusing others."
+                    )
+                    gUses.forEachIndexed { index, s -> ColoredPoint(s, index + 1) }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+                    SubSectionTitle("(ii) The verbal noun :-", Color(0xFF388E3C))
+                    Text("Gerund और verbal noun दोनों देखने मे एक से होते है | कुछ विद्वानों के अनुसार इन मे अंतर इतना होता है कि verbal noun के पहले 'The' और बाद मे 'of' आता है जब की gerund मे नहीं होता |", fontSize = 14.sp)
+                    ExampleItem("Example:", "The teaching of English is very difficult.")
+                }
+
+                Spacer(modifier = Modifier.height(40.dp))
             }
         }
     }
