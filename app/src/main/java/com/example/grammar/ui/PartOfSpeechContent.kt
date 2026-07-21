@@ -90,7 +90,7 @@ fun PartOfSpeechContent(modifier: Modifier = Modifier, onBackClick: () -> Unit =
                 // 1. Definitions
                 ContentSection(title = "1. Definitions & Examples", titleColor = Color(0xFF1976D2)) {
                     val parts = listOf(
-                        Triple("1. Noun (संज्ञा)", "A noun is the name of a person, place or thing.", "Ram, Nowogong."),
+                        Triple("1. Noun (संज्ञा)", "A noun is the name of a person, place or thing.", "Ram, Nowgong."),
                         Triple("2. Pronoun (सर्वनाम)", "A pronoun is a word used instead of a noun.", "He, She, it."),
                         Triple("3. Verb (क्रिया)", "A verb is a word that says something.", "Come, go."),
                         Triple("4. Adjective (विशेषण)", "An Adjective Qualifies a noun or a pronoun.", "Beautiful, Good."),

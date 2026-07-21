@@ -331,6 +331,6 @@
     <string name="master_grammar">Master English Grammar</string>
     <string name="description_label">Description:</string>
     <string name="writer_name">Written by Kalka Prasad Rajpoot</string>
-    <string name="creator_name">App created by Kuldeep Singh</string>
+    <string name="creator_name">App created by Lexical software</string>
     <string name="copyright_notice">© Copyright 2020-%1$d</string>
 </resources>

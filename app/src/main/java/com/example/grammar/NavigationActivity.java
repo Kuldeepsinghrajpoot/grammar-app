@@ -41,7 +41,7 @@ public class NavigationActivity extends AppCompatActivity {
         TextView tvCopyright = findViewById(R.id.tvCopyright);
         if (tvCopyright != null) {
             int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-            tvCopyright.setText("Written by Kalka Prasad Rajpoot \n App created by Kuldeep Singh \n © Copyright 2020-" + currentYear);
+            tvCopyright.setText("Written by Kalka Prasad Rajpoot \n App created by Lexical Software \n © Copyright 2020-" + currentYear);
         }
     }
 
